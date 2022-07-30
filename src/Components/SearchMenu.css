@@ -1,0 +1,21 @@
+.search-menu {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.filter-container {
+  margin: 3px;
+  padding: 3px;
+}
+
+.search-menu label {
+  margin: 2px;
+  padding: 2px;
+}
+
+.search-input {
+  margin: 3px;
+  padding: 3px;
+}

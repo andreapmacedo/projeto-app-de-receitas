@@ -1,0 +1,35 @@
+body {
+  width: 360px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.btn-icon {
+  background-color: burlywood;
+  border: none;
+  color: white;
+  height: 45px;
+  width: 45px;
+}
+
+.btn-icon:hover {
+  height: 55px;
+  width: 55px;
+}
+
+.search-bar {
+  align-items: center;
+  background-color: burlywood;
+  display: flex;
+  justify-content: space-around;
+  width: 360px;
+}
+
+.search-bar label {
+  margin: 10px;
+  padding: 3px;
+}
