@@ -1,23 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Drinks from '../images/drinkIcon.svg';
 import Explore from '../images/exploreIcon.svg';
 import Food from '../images/mealIcon.svg';
 import './Footer.css';
 
 
-const script = () => {
-  const list = document.querySelectorAll('.list');
-  function activelink(){
-    list.forEach((item) =>
-    item.classList.remove('active'));
-    this.classList.add('active');
-  }
-  list.forEach((item) =>
+
+    
+    const script = () => {
+      const list = document.querySelectorAll('.list');
+      function activelink(){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+      }
+      list.forEach((item) =>
   item.addEventListener('click', activelink));  
 }
 
 function Footer() {
+  console.log('Footer');
+  const history = useHistory();
+  const setRoute = (route) => {
+    console.log( route );
+    if(route === 'drinks'){
+      history.push('/drinks');
+    } else if (route === 'explore') {
+      history.push('/explore');
+    } else if (route === 'food') {
+      history.push('/foods');
+    }
+  }
+  
   return (
     <div
       className="navigation"
@@ -25,19 +41,20 @@ function Footer() {
     >
       <ul>
         <li className="list active">
-          <a href="#">
+          {/* <a href="#"> */}
             {/* <span class="icon" style={{color: "red"}}> */}
-            <span class="icon">
+            <span className="icon">
               <button
                 src={ Drinks }
                 type="button"
                 data-testid="drinks-bottom-btn"
+                onClick={ () => setRoute('drinks') }
               >
                 <img alt="drinks" src={ Drinks } />
               </button>
             </span>
             <span className="text">Drinks</span>
-          </a>          
+          {/* </a>           */}
         </li>
         <li className="list">
           <a href="#">
@@ -47,6 +64,7 @@ function Footer() {
               src={ Explore }
               type="button"
               data-testid="drinks-bottom-btn"
+              onClick={ () => setRoute('explore') }
             >
               <img alt="drinks" src={ Explore } />
             </button>
@@ -62,6 +80,7 @@ function Footer() {
                 src={ Food }
                 type="button"
                 data-testid="drinks-bottom-btn"
+                onClick={ () => setRoute('foods') }
               >
                 <img alt="drinks" src={ Food } />
               </button>
