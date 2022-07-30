@@ -24,20 +24,24 @@ function Footer() {
       data-testid="footer"
     >
       <ul>
-        <li class="list active">
+        <li className="list active">
           <a href="#">
-            <button
-              src={ Drinks }
-              type="button"
-              data-testid="drinks-bottom-btn"
-            >
-              <img alt="drinks" src={ Drinks } />
-            </button>
-            <span class="text">Drinks</span>
+            <span className="icon">
+              <button
+                src={ Drinks }
+                type="button"
+                data-testid="drinks-bottom-btn"
+              >
+                <img alt="drinks" src={ Drinks } />
+              </button>
+            </span>
+            <span className="text">Drinks</span>
           </a>          
         </li>
-        <li class="list active">
+        <li className="list">
           <a href="#">
+          <span className="icon">
+          {/* <ion-icon name="settings-outline"></ion-icon> */}
             <button
               src={ Explore }
               type="button"
@@ -45,24 +49,27 @@ function Footer() {
             >
               <img alt="drinks" src={ Explore } />
             </button>
-            <span class="text">Explore</span>
+          </span>
+            <span className="text">Explore</span>
           </a>          
         </li>
-        <li class="list active">
+        <li className="list">
           <a href="#">
-            <button
-              src={ Food }
-              type="button"
-              data-testid="drinks-bottom-btn"
-            >
-              <img alt="drinks" src={ Food } />
-            </button>
-            <span class="text">Food</span>
-          </a>          
+            <span className="icon">
+              {/* <ion-icon name="camera-outline"></ion-icon> */}
+              <button
+                src={ Food }
+                type="button"
+                data-testid="drinks-bottom-btn"
+              >
+                <img alt="drinks" src={ Food } />
+              </button>
+            </span>
+            <span className="text">Food</span>
+          </a>      
         </li>
+        <div className="indicator"></div>    
       </ul>
-
-
       <script>
         {script()}
       </script>

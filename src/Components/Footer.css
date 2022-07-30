@@ -1,4 +1,4 @@
-.footer-container {
+/* .footer-container {
   align-items: center;
   background-color: burlywood;
   bottom: 0;
@@ -18,7 +18,7 @@
 .footer-container button:hover {
   background-color: burlywood;
   border: 1px;
-}
+} */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 *
@@ -51,6 +51,7 @@
   justify-content: center;
   z-index: 1000;
   border-radius: 10px;
+  /* border-top: #fff solid 6px; */
 }
 .navigation ul 
 {
@@ -86,9 +87,10 @@
 	transition: 0.5s;
 	color: var(--clr);
 }
+
 .navigation ul li.active a .icon
 {
-	transform: translateY(-32px);
+	transform: translateY(-31px);
 }
 .navigation ul li a .text
 {
@@ -106,15 +108,23 @@
 	transform: translateY(10px);
 	opacity: 1;
 }
+
+.navigation button{
+  border:  none;
+  background: none;
+}
+
 .indicator
 {
 	position: absolute;
-	top: -50%;
+	top: -35%;
   width: 70px;
   height: 70px;
   background: #29fd53;
   border-radius: 100%;
   border: 6px solid var(--clr);
+  border: 6px solid #fff;
+  /* border: 6px solid #29fd5304; */
   cursor: pointer;
 	transition: 0.5s;;
 }
@@ -126,7 +136,8 @@
   width: 20px;
   height: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 1px -10px 0 0 var(--clr);
+  /* box-shadow: 1px -10px 0 0 var(--clr); */
+  box-shadow: -1px -10px 0 0 #fff;  
 }
 .indicator::after{
   content: '';
@@ -136,7 +147,8 @@
   width: 20px;
   height: 20px;
   border-top-left-radius: 20px;
-  box-shadow: -1px -10px 0 0 var(--clr);
+  /* box-shadow: -1px -10px 0 0 var(--clr); */
+  box-shadow: -1px -10px 0 0 #fff;
 }
 .navigation ul li:nth-child(2).active ~ .indicator
 {
