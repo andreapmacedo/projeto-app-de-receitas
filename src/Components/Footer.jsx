@@ -26,7 +26,8 @@ function Footer() {
       <ul>
         <li className="list active">
           <a href="#">
-            <span className="icon">
+            {/* <span class="icon" style={{color: "red"}}> */}
+            <span class="icon">
               <button
                 src={ Drinks }
                 type="button"
