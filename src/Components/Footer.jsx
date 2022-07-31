@@ -7,31 +7,21 @@ import Explore from '../images/exploreIcon.svg';
 import Food from '../images/mealIcon.svg';
 import './Footer.css';
 
-
-
-    
-
-
 function Footer() {
   // console.log('Footer');
 
   const history = useHistory();
   
-  const script = () => {
-    const list = document.querySelectorAll('.list');
-    function activelink() {
-      list.forEach((item) =>
-        item.classList.remove('active'));
-      this.classList.add('active');
-    }
-    list.forEach((item) =>
-      item.addEventListener('click', activelink));
-  }
-
-  const setSelectorByRoute = () => {
-    const pathname = history.location.pathname;
-    console.log(pathname.replace('/', ''));
-  }
+  // const script = () => {
+  //   const list = document.querySelectorAll('.list');
+  //   function activelink() {
+  //     list.forEach((item) =>
+  //       item.classList.remove('active'));
+  //     this.classList.add('active');
+  //   }
+  //   list.forEach((item) =>
+  //     item.addEventListener('click', activelink));
+  // }
 
   const getClassName = (itemNav) =>  {
     const pathname = (history.location.pathname).replace('/', '');
