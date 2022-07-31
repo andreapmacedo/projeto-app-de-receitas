@@ -1,10 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-
-import RecipesContext from '../Context/RecipesContext';
-
 import Header from '../Components/Header';
 import apiFoods from '../services/dataFoods';
+import RecipesContext from '../Context/RecipesContext';
 import Footer from '../Components/Footer';
 import Category from '../Components/Category';
 
@@ -46,33 +44,35 @@ function Foods() {
     <div className="foods">
       <Header />
       <Category />
-      {dataApiFoods.length === 1 && typeFilter === 'input' ? handleResponse()
-        : dataApiFoods.map((food, index) => (
-          (index < MAX_QUANTITY_RECIPES)
-        && (
-          <Link key={ index } to={ `/foods/${food.idMeal}` }>
-            <div
-              className="card"
-              data-testid={ `${index}-recipe-card` }
-            >
-              <div className="card-container">
-                <div className="card-img-conainer">
-                  <img
-                    data-testid={ `${index}-card-img` }
-                    src={ food.strMealThumb }
-                    alt={ food.strMealThumb }
-                  />
-                </div>
-                <div
-                  className="card-name-conainer"
-                >
-                  <span data-testid={ `${index}-card-name` }>{ food.strMeal }</span>
+      <div className="item-container">
+        {dataApiFoods.length === 1 && typeFilter === 'input' ? handleResponse()
+          : dataApiFoods.map((food, index) => (
+            (index < MAX_QUANTITY_RECIPES)
+          && (
+            <Link key={ index } to={ `/foods/${food.idMeal}` }>
+              <div
+                className="card"
+                data-testid={ `${index}-recipe-card` }
+              >
+                <div className="card-container">
+                  <div className="card-img-conainer">
+                    <img
+                      data-testid={ `${index}-card-img` }
+                      src={ food.strMealThumb }
+                      alt={ food.strMealThumb }
+                    />
+                  </div>
+                  <div
+                    className="card-name-conainer"
+                  >
+                    <span data-testid={ `${index}-card-name` }>{ food.strMeal }</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>)
-
-        ))}
+            </Link>)
+          ))
+        }
+      </div>
       <Footer />
     </div>
   );

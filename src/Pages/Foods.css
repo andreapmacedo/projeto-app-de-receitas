@@ -1,7 +1,15 @@
+
 .foods {
+/* min-width: 360px; */
+background-color: antiquewhite;
+}
+
+.foods .item-container {
   background-color: antiquewhite;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
+  /* align-items: center; */
+  /* height: 100vh; */
 }
-

@@ -1,10 +1,14 @@
 .category-container {
   display: flex;
+  min-width: 360px;
+  justify-content: space-around;
 }
 
 .category-container button {
   background-color: antiquewhite;
   border: none;
+  margin: 4px 2px 4px 2px;
+  font-size: 0.7em;
 }
 
 .category-container button:hover {

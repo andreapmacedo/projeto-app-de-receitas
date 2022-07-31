@@ -104,7 +104,7 @@ function Footer() {
           onClick={ () => setRoute('foods') }
             // onClick={ () => setTimeout(function(){
             //   setRoute('foods');
-            // }, 300) }
+            // }, 3000) }
           >
             <button
               src={ Food }
@@ -124,7 +124,6 @@ function Footer() {
       </script>
       {/* <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> */}
       {/* <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> */}
-
     </div>
   );
 }

@@ -1,8 +1,8 @@
 .search-menu {
-  background-color: burlywood;
+  background-color: rgb(138, 93, 34);
   display: flex;
   flex-direction: column;
-  width: 360px;
+  min-width: 360px;
 }
 
 .filter-container {

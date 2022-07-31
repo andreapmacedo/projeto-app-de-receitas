@@ -44,6 +44,7 @@
   /*  */
   position: fixed;
 	width: 100%;
+	min-width: 360px;
   bottom: 0;
   /*  */
 	height: 60px;
