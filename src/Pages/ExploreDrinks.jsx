@@ -13,28 +13,32 @@ function ExploreDrinks() {
   };
 
   return (
-    <div>
-      <Header />
-      <button
-        data-testid="explore-by-ingredient"
-        type="button"
-        onClick={ () => history.push('/explore/drinks/ingredients') }
-      >
-        By Ingredient
-      </button>
-      <button
-        type="button"
-        onClick={ () => history.push('/explore/drinks/nationalities') }
-      >
-        By Nationality
-      </button>
-      <button
-        data-testid="explore-surprise"
-        type="button"
-        onClick={ acessRandomRecipe }
-      >
-        Surprise me!
-      </button>
+    <div className="explore">
+      <div className='explore-header' >
+        <Header />
+      </div>
+      <div className="explore-content">
+        <button
+          data-testid="explore-by-ingredient"
+          type="button"
+          onClick={ () => history.push('/explore/drinks/ingredients') }
+        >
+          By Ingredient
+        </button>
+        <button
+          type="button"
+          onClick={ () => history.push('/explore/drinks/nationalities') }
+        >
+          By Nationality
+        </button>
+        <button
+          data-testid="explore-surprise"
+          type="button"
+          onClick={ acessRandomRecipe }
+        >
+          Surprise me!
+        </button>
+      </div>
       <Footer />
     </div>
   );

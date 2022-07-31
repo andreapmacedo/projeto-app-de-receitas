@@ -45,6 +45,7 @@ function Foods() {
       <Header />
       <Category />
       <div className="item-container">
+        <div className="bcl"></div>
         {dataApiFoods.length === 1 && typeFilter === 'input' ? handleResponse()
           : dataApiFoods.map((food, index) => (
             (index < MAX_QUANTITY_RECIPES)

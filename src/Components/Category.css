@@ -11,9 +11,10 @@
   border: none;
   margin: 4px 2px 4px 2px;
   font-size: 0.7em;
+  color: var(--item-dark);
 }
 
 .category-container button:hover {
-  color: brown;
+  color: var(--active);
 }
 

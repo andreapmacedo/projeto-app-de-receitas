@@ -47,8 +47,8 @@
   --primary-light: #fff350;
   --primary-dark: c79100;
 	--soft:#ffffe4;
-	--active-light: red; 
-	--active-dark: brown; 
+	--item-light: #ff867c; 
+	--item-dark: brown; 
 	--active: red;
 }
 /* :root
@@ -133,9 +133,9 @@
 	border-radius: 50%;
 	transition: 0.5s;
 	transition-delay: 0s;
-	background-color: var(--soft);
-	/* background-color: #fff; */
-
+	/* background-color: #fdfdfd; */
+	/* background-color: var(--soft); */
+	background-color: #fff;
 }
 
 .navigation ul li button{
@@ -154,16 +154,16 @@
 .navigation ul li.active .icon 
 {
 	transform: translateY(-16px);
-	color: #fff;
+	/* background-color: #f9f9f9; */
 	transition-delay: 0.25s;
 	/* width: 55px;
 	height: 55px; */
-	background: var(--primary-light);
+	background: var(--soft);
 }
 
 .navigation ul li.active button{
   border:  none;
-	background-color: var(--primary-light);
+	background-color: var(--soft);
 	border-radius: 100%;
 	width: 55px;
 	height: 55px;
@@ -178,7 +178,7 @@
 .navigation ul li .text {
 	/* background-color: #222327; */
 	transform: translateY(-2px);
-	color: var(--active-dark);
+	color: var(--item-dark);
 }
 
 .navigation ul li.active .text {
