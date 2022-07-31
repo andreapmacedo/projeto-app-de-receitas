@@ -28,16 +28,36 @@
 	box-sizing: border-box; */
 	font-family: 'Poppins', sans-serif;
 }
-:root
+/* :root
 {
 	--clr:#222327;
   --primary: #ffe0b2;
   --primary-light: #ffffe4;
-  /* --primary-dark: #cbae82; */
-  --primary-dark: burlywood;
-  --primary-dark: white;
-  
-}*
+  --primary-dark: burlywood; 
+} */
+:root
+{
+	--clr:#222327;
+  --primary: #ff9800;
+  --primary: #9c27b0;
+  --primary: #e91e63;
+  --primary: #009688;
+  --primary: #cddc39;
+  --primary: #ffc107;
+  --primary-light: #fff350;
+  --primary-dark: c79100;
+	--soft:#ffffe4;
+	--active-light: red; 
+	--active-dark: brown; 
+	--active: red;
+}
+/* :root
+{
+	--clr:#222327;
+  --primary: #ffe0b2;
+  --primary-light: #ffffe4;
+  --primary-dark: burlywood; 
+} */
 
 .navigation 
 {
@@ -113,8 +133,8 @@
 	border-radius: 50%;
 	transition: 0.5s;
 	transition-delay: 0s;
-	/* background-color: var(--primary-dark); */
-	background-color: #fff;
+	background-color: var(--soft);
+	/* background-color: #fff; */
 
 }
 
@@ -158,12 +178,13 @@
 .navigation ul li .text {
 	/* background-color: #222327; */
 	transform: translateY(-2px);
+	color: var(--active-dark);
 }
 
 .navigation ul li.active .text {
 	/* background-color: #222327; */
 	/* transform: translateY(-1px); */
-	color: red;
+	color: var(--active);
 }
 
 

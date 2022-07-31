@@ -1,15 +1,28 @@
 .explore {
   width: 100%;
-  /* background-color: var(--primary); */
+  top: 0;
 }
 
-/* .explore:nth-child(1) {
-  width: 100%;
-} */
+.explore-header {
+  /* top: 0; */
+}
 
-.explore button {
+.explore-content {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--primary);
+}
+
+.explore-content button {
   border: none;
   background-color: var(--primary);
-  width: 50%;
+  /* width: 50%; */
+  color: brown;
+}
+
+.explore-content-c3 button {
+  border: none;
+  background-color: var(--primary);
+  /* width: 33.33%; */
   color: brown;
 }

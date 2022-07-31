@@ -3,12 +3,14 @@
 /* min-width: 360px; */
 /* background-color: antiquewhite; */
 background-color: var(--primary);
-
+width: 100%;
 }
 
 .foods .item-container {
-  background-color: antiquewhite;
-  background-color: white;
+  width: 100%;
+  /* background-color: antiquewhite; */
+  /* background-color: white; */
+  background-color: var(--soft);
   /* background-color: var(--primary); */
   display: flex;
   flex-wrap: wrap;
