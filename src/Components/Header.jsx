@@ -46,43 +46,45 @@ function Header() {
   }
 
   return (
-    <header className="header">
-      <div className="search-bar">
-        <button
-          className="btn-icon"
-          type="button"
-          data-testid="profile-top-btn"
-          onClick={ handleProfile }
-          src={ imgProfile }
-        >
-          <img src={ imgProfile } alt="Profile" />
-        </button>
+    <header>
+      <div className="search-container" >
+        <div className="search-bar">
+          <button
+            className="btn-icon"
+            type="button"
+            data-testid="profile-top-btn"
+            onClick={ handleProfile }
+            src={ imgProfile }
+          >
+            <img src={ imgProfile } alt="Profile" />
+          </button>
 
-        <h3
-          data-testid="page-title"
-        >
-          { setTitle() }
-        </h3>
-        { (history.location.pathname !== '/profile')
-          && (history.location.pathname !== '/explore')
-          && (history.location.pathname !== '/explore/foods')
-          && (history.location.pathname !== '/explore/drinks')
-          && (history.location.pathname !== '/explore/foods/ingredients')
-          && (history.location.pathname !== '/explore/drinks/ingredients')
-          && (history.location.pathname !== '/done-recipes')
-          && (history.location.pathname !== '/favorite-recipes') === true ? (
-            <button
-              className="btn-icon"
-              type="button"
-              data-testid="search-top-btn"
-              onClick={ handleShowInput }
-              src={ imgSearch }
-            >
-              <img src={ imgSearch } alt="Search" />
-            </button>
-          ) : null}
+          <h3
+            data-testid="page-title"
+          >
+            { setTitle() }
+          </h3>
+          { (history.location.pathname !== '/profile')
+            && (history.location.pathname !== '/explore')
+            && (history.location.pathname !== '/explore/foods')
+            && (history.location.pathname !== '/explore/drinks')
+            && (history.location.pathname !== '/explore/foods/ingredients')
+            && (history.location.pathname !== '/explore/drinks/ingredients')
+            && (history.location.pathname !== '/done-recipes')
+            && (history.location.pathname !== '/favorite-recipes') === true ? (
+              <button
+                className="btn-icon"
+                type="button"
+                data-testid="search-top-btn"
+                onClick={ handleShowInput }
+                src={ imgSearch }
+              >
+                <img src={ imgSearch } alt="Search" />
+              </button>
+            ) : null}
+        </div>
+        { showInput && <SearchMenu /> }
       </div>
-      { showInput && <SearchMenu /> }
     </header>);
 }
 

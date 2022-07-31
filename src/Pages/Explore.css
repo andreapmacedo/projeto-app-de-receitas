@@ -1,0 +1,15 @@
+.explore {
+  width: 100%;
+  /* background-color: var(--primary); */
+}
+
+/* .explore:nth-child(1) {
+  width: 100%;
+} */
+
+.explore button {
+  border: none;
+  background-color: var(--primary);
+  width: 50%;
+  color: brown;
+}

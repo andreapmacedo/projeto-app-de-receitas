@@ -8,6 +8,7 @@ background-color: var(--primary);
 
 .foods .item-container {
   background-color: antiquewhite;
+  background-color: white;
   /* background-color: var(--primary); */
   display: flex;
   flex-wrap: wrap;

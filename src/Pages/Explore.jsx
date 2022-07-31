@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-
+// import './Foods.css';
+import './Explore.css';
 
 function Explore() {
   return (
-    <div>
+    <div className="explore">
       <Header />
       <Link to="/explore/foods">
         <button type="button" data-testid="explore-foods">

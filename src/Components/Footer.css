@@ -55,7 +55,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  border-radius: 8px 8px 0 0;
+  /* border-radius: 8px 8px 0 0; */
 }
 .navigation ul 
 {
@@ -102,29 +102,51 @@
 	position: relative;
 	/* position: absolute; */
 	display: block;
-	transform: translateY(-8px);
+	transform: translateY(-6px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	/* line-height: 55px; */
 	font-size: 1.5em;
-	width: 62px;
-	height:55px;
+	/* width: 62px; */
+	/* height:55px; */
 	border-radius: 50%;
 	transition: 0.5s;
 	transition-delay: 0s;
-	/* background-color: aqua; */
+	/* background-color: var(--primary-dark); */
+	background-color: #fff;
+
+}
+
+.navigation ul li button{
+  border:  none;
+	transform: translateY(-2px);
+	background-color: var(--primary-dark);
+	background-color: transparent;
+	border-radius: 100%;
+	/* aqui */
+	width: 55px;
+	height: 55px; 
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 }
 
 .navigation ul li.active .icon 
 {
-	transform: translateY(-6px);
+	transform: translateY(-16px);
 	color: #fff;
 	transition-delay: 0.25s;
+	/* width: 55px;
+	height: 55px; */
+	background: var(--primary-light);
+}
+
+.navigation ul li.active button{
+  border:  none;
+	background-color: var(--primary-light);
+	border-radius: 100%;
 	width: 55px;
 	height: 55px;
-	background: var(--primary-light);
 }
 
 .navigation ul li .item-navigator-container .text {
@@ -150,7 +172,7 @@
 {
 	content: '';
 	position: absolute;
-	top: 10px;
+	/* top: 10px; */
 	left: 0;
 	/* width: 100%; */
 	/* height: 100%; */
@@ -165,30 +187,4 @@
 {
 	transition-delay: 0.5s;
 	opacity: 0.5; 
-}
-
-.navigation ul li button{
-  border:  none;
-  /* background: none; */
-	transform: translateY(-6px);
-	background-color: var(--primary-dark);
-	border-radius: 100%;
-	width: 65px;
-	height: 65px;
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-	/* color: #cbae82; */
-  /* color: #fff; */
-  /* color: var(--primary-light); */
-}
-
-.navigation ul li.active button{
-  border:  none;
-  /* background: none; */
-	background-color: var(--primary-light);
-	border-radius: 100%;
-	width: 55px;
-	height: 55px;
-	/* color: #cbae82; */
-  /* color: #fff; */
-  /* color: var(--primary-light); */
 }
