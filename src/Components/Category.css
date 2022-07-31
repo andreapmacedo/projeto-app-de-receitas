@@ -5,7 +5,8 @@
 }
 
 .category-container button {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
+  background-color: var(--primary);
   border: none;
   margin: 4px 2px 4px 2px;
   font-size: 0.7em;

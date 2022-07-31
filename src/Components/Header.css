@@ -7,7 +7,9 @@ header {
 }
 
 .btn-icon {
-  background-color: burlywood;
+  /* background-color: burlywood; */
+  /* background-color: brown; */
+  background-color: var(--primary);
   border: none;
   color: white;
   height: 45px;
@@ -21,7 +23,9 @@ header {
 
 .search-bar {
   align-items: center;
-  background-color: burlywood;
+  /* background-color: burlywood; */
+  /* background-color: brown; */
+  background-color: var(--primary);
   display: flex;
   justify-content: space-around;
   min-width: 360px;

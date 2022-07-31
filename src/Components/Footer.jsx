@@ -59,63 +59,69 @@ function Footer() {
           className={ getClassName('drinks') }
         >
           {/* <span class="icon" style={{color: "red"}}> */}
-          <span className="icon"
-            onClick={ () => setRoute('drinks') }
-            // onClick={ () => setTimeout(function(){
-            //   setRoute('drinks');
-            // }, 300) }
-          >
-            <button
-              className="button-footer"
-              src={ Drinks }
-              type="button"
-              data-testid="drinks-bottom-btn"
-              // onClick={ () => setRoute('drinks') }
+          <div className="item-navigator-container">
+            <span className="icon"
+              onClick={ () => setRoute('drinks') }
+              // onClick={ () => setTimeout(function(){
+              //   setRoute('drinks');
+              // }, 300) }
             >
-              <img alt="drinks" src={ Drinks } />
-            </button>
-          </span>
-          <span className="text">Drinks</span>
+              <button
+                className="button-footer"
+                src={ Drinks }
+                type="button"
+                data-testid="drinks-bottom-btn"
+                // onClick={ () => setRoute('drinks') }
+              >
+                <img alt="drinks" src={ Drinks } />
+              </button>
+            </span>
+            <span className="text">Drinks</span>
+          </div>
         </li>
         <li 
           className={ getClassName('explore') }
         >
-          <span className="icon"
-          onClick={ () => setRoute('explore') }
-            // onClick={ () => setTimeout(function(){
-            //   setRoute('explore');
-            // }, 300) }
-          >
-            <button
-              src={ Explore }
-              type="button"
-              data-testid="drinks-bottom-btn"
-              // onClick={ () => setRoute('explore') }
+          <div className="item-navigator-container">
+            <span className="icon"
+            onClick={ () => setRoute('explore') }
+              // onClick={ () => setTimeout(function(){
+              //   setRoute('explore');
+              // }, 300) }
             >
-              <img alt="drinks" src={ Explore } />
-            </button>
-          </span>
-            <span className="text">Explore</span>         
+              <button
+                src={ Explore }
+                type="button"
+                data-testid="drinks-bottom-btn"
+                // onClick={ () => setRoute('explore') }
+              >
+                <img alt="drinks" src={ Explore } />
+              </button>
+            </span>
+              <span className="text">Explore</span>         
+          </div>
         </li>
         <li 
           className={ getClassName('foods') }
         >
-          <span className="icon"
-          onClick={ () => setRoute('foods') }
-            // onClick={ () => setTimeout(function(){
-            //   setRoute('foods');
-            // }, 3000) }
-          >
-            <button
-              src={ Food }
-              type="button"
-              data-testid="drinks-bottom-btn"
-              // onClick={ () => setRoute('foods') }
+          <div className="item-navigator-container">
+            <span className="icon"
+            onClick={ () => setRoute('foods') }
+              // onClick={ () => setTimeout(function(){
+              //   setRoute('foods');
+              // }, 3000) }
             >
-              <img alt="drinks" src={ Food } />
-            </button>
-          </span>
-          <span className="text">Food</span>
+              <button
+                src={ Food }
+                type="button"
+                data-testid="drinks-bottom-btn"
+                // onClick={ () => setRoute('foods') }
+              >
+                <img alt="drinks" src={ Food } />
+              </button>
+            </span>
+            <span className="text">Food</span>
+          </div>
         </li>
         <div className="indicator"></div>    
       </ul>

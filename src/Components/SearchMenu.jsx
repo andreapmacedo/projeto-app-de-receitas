@@ -78,7 +78,6 @@ export default function SearchMenu() {
       />
       <div className="filter-container">
         <label htmlFor="ingredient">
-          Ingredients
           <input
             id="ingredient"
             name="radioSearch"
@@ -86,11 +85,11 @@ export default function SearchMenu() {
             type="radio"
             value="ingredient"
             onChange={ inputHandleChange }
-          />
+            />
+            <span> Ingredients</span>
         </label>
 
         <label htmlFor="name-ingredient">
-          Name
           <input
             name="radioSearch"
             id="name-ingredient"
@@ -98,11 +97,12 @@ export default function SearchMenu() {
             type="radio"
             value="name-ingredient"
             onChange={ inputHandleChange }
-          />
+            />
+            <span>Name</span>
         </label>
 
         <label htmlFor="first-letter">
-          First Letter
+          
           <input
             name="radioSearch"
             id="first-letter"
@@ -111,6 +111,8 @@ export default function SearchMenu() {
             value="first-letter"
             onChange={ inputHandleChange }
           />
+          <span>First Letter</span>
+          
         </label>
 
         <button
