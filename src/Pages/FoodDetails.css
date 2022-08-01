@@ -90,10 +90,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* width: 500px; */
   background-color: beige;
 }
 
-.recomended h1 {
+.recommended h1 {
   color: var(--item-dark);
   /* width: 100%; */
 }
@@ -120,7 +121,7 @@
   display: flex;
   flex-flow: column wrap;
   /* max-height: 200px; */
-  overflow-x: scroll;
+  overflow-y: scroll;
   width: 100%;
   height: 200px;
   background-color: red;
@@ -139,8 +140,8 @@
   /* width: 181px; */
 }
 
-.recommended-card-return {
-  background-color: aquamarine;
+.recommended-box {
+  /* background-color: aquamarine; */
   width: 100%;
 }
 
