@@ -79,13 +79,14 @@ export default function FoodInProgress() {
   };
 
   return (
-    <div className="details-container" >
+    <div className="in-progress-container" >
       <div 
         key={ recipe.idMeal }
         className="header-details"
       >
         <div className="details-image-container">
           <img
+            className="details-img"
             data-testid="recipe-photo"
             src={ recipe.strMealThumb }
             alt={ recipe.strMealThumb }
