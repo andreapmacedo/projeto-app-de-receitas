@@ -94,7 +94,8 @@ export default function Category() {
         >
           { item.strCategory }
 
-        </button>)) }
+        </button>)) 
+      }
     </div>
   );
 }

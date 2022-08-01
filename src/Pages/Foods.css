@@ -1,7 +1,84 @@
+
 .foods {
-  background-color: antiquewhite;
+/* min-width: 360px; */
+/* background-color: antiquewhite; */
+background-color: var(--primary);
+width: 100%;
+}
+
+.foods .item-container {
+  width: 100%;
+  /* background-color: antiquewhite; */
+  /* background-color: white; */
+  background-color: var(--soft);
+  /* background-color: var(--primary); */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
+  /* align-items: center; */
+  /* height: 100vh; */
 }
 
+.bcl {
+  position: absolute;
+  position: fixed;
+  background: repeating-linear-gradient(
+    45deg,
+    /* #111fff, */
+    /* var(--primary), */
+    rgb(253, 244, 200),
+    var(--soft) 2px, /* importante */
+    var(--soft) 5px,
+    var(--soft) 2px /* importante */
+    );
+    width: 100%;
+    height: 100vh;
+    /* height: 10000px; */
+    z-index: 0;
+  }
+
+  /* .bcl {
+  position: absolute;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    var(--soft) 5px,
+    var(--primary) 5px,
+    #fff 5px,
+    var(--soft) 5px
+    );
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+  } */
+
+/* .bcl {
+  position: absolute;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    var(--soft) 15px,
+    var(--primary) 5px,
+    #fff 5px,
+    var(--soft) 10px
+    );
+    width: 100%;
+    height: 900px;
+    z-index: 0;
+  } */
+
+
+/* .bcl {
+  position: absolute;
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 10px,
+    #FFE13A 10px,
+    #FFE13A 20px
+    );
+    width: 100%;
+    height: 900px;
+    z-index: 0;
+  } */

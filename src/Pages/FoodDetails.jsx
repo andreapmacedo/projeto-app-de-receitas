@@ -78,22 +78,25 @@ export default function FoodDetails() {
           </div>
         </div>
       </div>
-
-      <ul>
-        <IngredientsRecipe recipe={ recipe } />
-      </ul>
-      <span data-testid="instructions">{ recipe.strInstructions }</span>
-      <div>
-        <section>
-          <iframe
-            src={ `https://www.youtube.com/embed/${recipe?.strYoutube?.split('=')[1]}` }
-            data-testid="video"
-            title="video player"
-            width="360"
-            heigth="420"
-          />
+      <div className="ingredients-container">
+        <ul>
+          <IngredientsRecipe recipe={ recipe } />
+        </ul>
+      </div>
+      <div className="instructions-container">
+        <span data-testid="instructions">{ recipe.strInstructions }</span>
+      </div>
+      <div className="yt-frame">
+        <iframe
+          src={ `https://www.youtube.com/embed/${recipe?.strYoutube?.split('=')[1]}` }
+          data-testid="video"
+          title="video player"
+          width="360"
+          heigth="420"
+        />
+        <div className="recommended">
           <RecomendationCardFood />
-        </section>
+        </div>
       </div>
       <div className="btn-start-recipe-container">
         {!(verifyRecipe(localDone, id)) && (
@@ -102,7 +105,7 @@ export default function FoodDetails() {
             data-testid="start-recipe-btn"
             type="button"
             onClick={ recipeStatus }
-          >
+            >
             { status }
           </button>
         )}

@@ -45,27 +45,35 @@ function Drinks() {
     <div className="foods">
       <Header />
       <Category />
-      {dataApiDrinks.length === 1 && typeFilter === 'input' ? handleResponse()
-        : dataApiDrinks.map((drink, index) => (
-          (index < MAX_QUANTITY_RECIPES)
-        && (
-          <Link key={ index } to={ `/drinks/${drink.idDrink}` }>
-            <div
-              className="card"
-              data-testid={ `${index}-recipe-card` }
-            >
-              <img
-                data-testid={ `${index}-card-img` }
-                src={ drink.strDrinkThumb }
-                alt={ drink.strDrinkThumb }
-              />
-              <div className="card-name-container">
-                <span data-testid={ `${index}-card-name` }>{ drink.strDrink }</span>
+      <div className="item-container">
+      <div className="bcl"></div>
+        {dataApiDrinks.length === 1 && typeFilter === 'input' ? handleResponse()
+          : dataApiDrinks.map((drink, index) => (
+            (index < MAX_QUANTITY_RECIPES)
+          && (
+            <Link key={ index } to={ `/drinks/${drink.idDrink}` }>
+              <div
+                className="card"
+                data-testid={ `${index}-recipe-card` }
+              >
+                <div className="card-container">
+                  <div className="card-img-container">
+                    <img
+                      data-testid={ `${index}-card-img` }
+                      src={ drink.strDrinkThumb }
+                      alt={ drink.strDrinkThumb }
+                    />
+                  </div>               
+                    <div 
+                      className="card-name-container">
+                      <span data-testid={ `${index}-card-name` }>{ drink.strDrink }</span>
+                    </div>
+                </div>                
               </div>
-            </div>
-          </Link>)
-
-        ))}
+            </Link>)
+          ))}
+      </div>
+      <div className="up-level" ></div>
       <Footer />
     </div>
   );

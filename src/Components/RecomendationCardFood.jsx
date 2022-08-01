@@ -9,11 +9,11 @@ export default function RecomendationCardFood() {
     return (
       <>
         <h1>Recommended</h1>
-        <div className="recomended-card-container">
+        <div className="recommended-card-container">
           {recommended.map((drink, index) => (
             <div
               key={ index }
-              className="recomended-card"
+              className="recommended-card"
               data-testid={ `${index}-recomendation-card` }
             >
               <img
@@ -41,7 +41,7 @@ export default function RecomendationCardFood() {
 
   return (
     <div>
-      <div className="recommended-card">
+      <div className="recommended-card-return">
         {setRecommendedCard()}
       </div>
     </div>
