@@ -92,6 +92,7 @@
   width: 100%;
   /* width: 500px; */
   background-color: beige;
+  background-color: var(--soft);
 }
 
 .recommended h1 {
@@ -121,28 +122,33 @@
   display: flex;
   flex-flow: column wrap;
   /* max-height: 200px; */
-  overflow-y: scroll;
+  overflow-x: scroll;
   width: 100%;
   height: 200px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .recommended-card {
   align-items: center;
-  background-color: bisque;
+  /* background-color: bisque; */
   color: brown;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   /* width: 100%; */
   height: 170px;
   background-color: aqua;
+  background-color: var(--soft);
   /* width: 181px; */
 }
 
 .recommended-box {
   /* background-color: aquamarine; */
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .recommended-card img {
