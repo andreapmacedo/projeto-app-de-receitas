@@ -51,6 +51,8 @@
 	--item-light: #ff867c; 
 	--item-dark: brown; 
 	--active: red;
+	--active-soft: #ff7738;
+
 }
 /* :root
 {
@@ -145,6 +147,7 @@
 	transform: translateY(-2px);
 	background-color: var(--primary-dark);
 	background-color: var(--soft-w);
+	background-color: var(--soft);
 	/* background-color: transparent; */
 	
 	border-radius: 100%;
@@ -166,7 +169,11 @@
 
 .navigation ul li.active button{
   border:  none;
-	background-color: var(--soft);
+	/* background-color: var(--soft);
+	background-color: var(--primary);
+	background-color: #cddc39;
+	background-color: #9aff4d; */
+	background-color: var(--active-soft);
 	border-radius: 100%;
 	width: 60px;
 	height: 60px;
@@ -213,8 +220,7 @@
 	opacity: 0.5; 
 }
 
-.up-level {
+/* .up-level {
 	width: 100%;
 	height: 70px;
-
-}
+} */
