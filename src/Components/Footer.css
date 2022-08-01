@@ -47,6 +47,7 @@
   --primary-light: #fff350;
   --primary-dark: c79100;
 	--soft:#ffffe4;
+	--soft-w:rgb(249, 247, 242);
 	--item-light: #ff867c; 
 	--item-dark: brown; 
 	--active: red;
@@ -143,7 +144,7 @@
   border:  none;
 	transform: translateY(-2px);
 	background-color: var(--primary-dark);
-	background-color: #fff;
+	background-color: var(--soft-w);
 	/* background-color: transparent; */
 	
 	border-radius: 100%;
@@ -151,7 +152,6 @@
 	width: 58px;
 	height: 58px; 
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
 }
 
 .navigation ul li.active .icon 

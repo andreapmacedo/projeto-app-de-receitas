@@ -22,6 +22,7 @@ width: 100%;
 
 .bcl {
   position: absolute;
+  position: fixed;
   background: repeating-linear-gradient(
     45deg,
     /* #111fff, */

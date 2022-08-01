@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import imgProfile from '../images/profileIcon.svg';
+// import imgProfile from '../images/user-regular.svg';
 import imgSearch from '../images/searchIcon.svg';
 import SearchMenu from './SearchMenu';
 import './Header.css';
+import { shape } from 'prop-types';
 
 function Header() {
   const history = useHistory();
@@ -81,7 +83,8 @@ function Header() {
               >
                 <img src={ imgSearch } alt="Search" />
               </button>
-            ) : null}
+            // ) : null}
+            ) : <div className="null-space" ></div>}
         </div>
         { showInput && <SearchMenu /> }
       </div>
