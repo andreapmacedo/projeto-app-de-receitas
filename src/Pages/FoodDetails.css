@@ -77,6 +77,10 @@
   list-style-type: none;
 }
 
+.ingredients-container ul div label {
+/* background-color: aqua; */
+}
+
 .instructions-container {
   background-color: bisque;
   background-color: var(--soft);
@@ -194,3 +198,5 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+

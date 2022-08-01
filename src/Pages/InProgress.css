@@ -27,10 +27,38 @@
   width: 100%;
 }
 
-
 .in-progress-container .instructions-container {
   background-color: bisque;
   background-color: var(--soft);
   padding: 0 20px 70px 20px;
-  /* padding-left: 30px; */
+}
+
+.ingredients-in-container {
+  display: flex;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.ingredients-in-container label {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding-right: 10px;
+  background-color: var(--soft-w);
+  background-color: rgb(251, 241, 218);
+  padding: 2px 12px 2px 12px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.072), 0 10px 10px rgba(0,0,0,0.072);
+  width: 100%;
+}
+
+.ingredients-in-container input {
+  padding: 2px;
+  background-color: blue;
+}
+
+.ingredients-in-container input .box{
+  padding: 1px;
+  width: 100%;
 }
