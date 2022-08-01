@@ -50,6 +50,10 @@
   justify-content: center;
 }
 
+.header-title-conainer .left {
+  padding-left: 20px;
+}
+
 .header-details-btns-container {
   margin: 10px;
   /* padding: 10px; */
@@ -155,7 +159,7 @@
 }
 
 .recommended-card img {
-  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px , rgba(0, 0, 0, 0.23) 0 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0 10px 20px , rgba(0, 0, 0, 0.23) 0 6px 6px;
   border-radius: 10px;
   /* box-shadow: 3px 3px rgba(0, 0, 0, 0.5); */
   max-width: 110px;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import RecipesContext from '../Context/RecipesContext';
+import './InProgress.css'
 
 import IngredientsRecipeFoodInProgress
 from '../Components/IngredientsRecipeFoodInProgress';
@@ -78,27 +79,39 @@ export default function FoodInProgress() {
   };
 
   return (
-    <div>
-      <div key={ recipe.idMeal }>
+    <div className="in-progress-container" >
+      <div 
+        key={ recipe.idMeal }
+        className="in-progress-recipe"
+      >
         <img
           data-testid="recipe-photo"
           src={ recipe.strMealThumb }
           alt={ recipe.strMealThumb }
         />
-        <span data-testid="recipe-title">{recipe.strMeal}</span>
+        <div className="header-title-conainer">
+          <div className="left">
+            <h3 data-testid="recipe-title">{recipe.strMeal}</h3>
+            <span data-testid="recipe-category">{recipe.strCategory}</span>
+          </div>
+          <div className="header-details-btns-container">
+            <FavoritedFood recipe={ recipe } />
+          </div>
+        </div>    
 
-        <FavoritedFood recipe={ recipe } />
+        <div className="ingredients-container">
+          <ul>
+            <IngredientsRecipeFoodInProgress
+              recipe={ recipe }
+              countIngredients={ countIngredients }
+            />
+          </ul>
+        </div>
 
-        <span data-testid="recipe-category">{recipe.strCategory}</span>
+        <div className="instructions-container">
+          <span data-testid="instructions">{ recipe.strInstructions }</span>
 
-        <ul>
-          <IngredientsRecipeFoodInProgress
-            recipe={ recipe }
-            countIngredients={ countIngredients }
-          />
-        </ul>
-
-        <span data-testid="instructions">{ recipe.strInstructions }</span>
+        </div>
 
         <div className="btn-start-recipe-container">
           {console.log('isDisabled', isDisabled)}
