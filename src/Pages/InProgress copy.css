@@ -1,0 +1,211 @@
+/* .in-progress-recipe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.in-progress-recipe img {
+  
+  background-color: rgb(242, 237, 214);
+  
+  height: 120px;
+  overflow: hidden;
+  
+  height: 300px;
+  width: 100%;
+} */
+.details-container {
+  /* position: fixed; */
+  background-color: var(--soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-details {
+  /* border-radius: 10px; */
+  /* box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px , rgba(0, 0, 0, 0.23) 0 6px 6px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.details-image-container {
+  align-items: center;
+  background-color: rgb(242, 237, 214);
+  
+  /* border-radius: 10px 10px 0 0; */
+  display: flex;
+  height: 120px;
+  overflow: hidden;
+  /* padding-bottom: 5px; */
+  /* padding-top: 5px; */
+  height: 300px;
+  width: 100%;
+}
+
+.details-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.header-title-conainer {
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px , rgba(0, 0, 0, 0.23) 0 6px 6px;
+  padding-top: 10px;
+  align-items: center;
+  background-color: rgb(249, 247, 242);
+  /* border-radius: 0 0 10px 10px; */
+  color: brown;
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+  width: 100%;
+  z-index: 2;
+}
+
+.header-title-conainer span {
+  display: flex;
+  justify-content: center;
+}
+
+.header-title-conainer .left {
+  padding-left: 20px;
+}
+
+.header-details-btns-container {
+  margin: 10px;
+  /* padding: 10px; */
+}
+
+.header-details-btns-container button {
+  
+  padding-left: 40px;
+  /* background-color: rgb(249, 247, 242); */
+  background-color: var(--soft-w);
+  border: none;
+}
+
+.ingredients-container {
+  padding: 20px 20px 0 20px;
+  background-color: bisque;
+  background-color: var(--soft);
+}
+
+.ingredients-container ul {
+  list-style-type: none;
+}
+
+.instructions-container {
+  background-color: bisque;
+  background-color: var(--soft);
+  padding: 0 20px 20px 20px;
+  /* padding-left: 30px; */
+}
+.instructions-container span{
+  text-align: justify-all;
+  /* text-align: start; */
+  /* padding: 0 20px 20px 20px; */
+}
+
+.recommended {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* width: 500px; */
+  background-color: beige;
+  background-color: var(--soft);
+}
+
+.recommended h1 {
+  color: var(--item-dark);
+  /* width: 100%; */
+}
+
+.yt-frame {
+  background-color: bisque;
+  background-color: var(--soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* height: 100%; */
+  padding-bottom: 50px;
+}
+
+.yt-frame iframe {
+  border: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.recommended-card-container {
+  display: flex;
+  flex-flow: column wrap;
+  /* max-height: 200px; */
+  overflow-x: scroll;
+  width: 100%;
+  height: 200px;
+  /* background-color: red; */
+}
+
+.recommended-card {
+  align-items: center;
+  /* background-color: bisque; */
+  color: brown;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 10px 15px;
+  /* width: 100%; */
+  height: 170px;
+  background-color: aqua;
+  background-color: var(--soft);
+  /* width: 181px; */
+}
+.recommended-card span {
+  padding-top: 6px;
+}
+
+.recommended-box {
+  /* background-color: aquamarine; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommended-card img {
+  box-shadow: rgba(0, 0, 0, 0.01) 0 10px 20px , rgba(0, 0, 0, 0.23) 0 6px 6px;
+  border-radius: 10px;
+  /* box-shadow: 3px 3px rgba(0, 0, 0, 0.5); */
+  max-width: 110px;
+  width: 160px;
+}
+
+.btn-start-recipe {
+  background-color: rgb(108, 203, 108);
+  border: none;
+  bottom: 0;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  font-style: oblique;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  /* width: 360px; */
+}
+
+.up-level {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 70px;
+  bottom: 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

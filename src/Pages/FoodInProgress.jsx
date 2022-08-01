@@ -79,20 +79,22 @@ export default function FoodInProgress() {
   };
 
   return (
-    <div className="in-progress-container" >
+    <div className="details-container" >
       <div 
         key={ recipe.idMeal }
-        className="in-progress-recipe"
+        className="header-details"
       >
-        <img
-          data-testid="recipe-photo"
-          src={ recipe.strMealThumb }
-          alt={ recipe.strMealThumb }
-        />
+        <div className="details-image-container">
+          <img
+            data-testid="recipe-photo"
+            src={ recipe.strMealThumb }
+            alt={ recipe.strMealThumb }
+          />
+        </div>
         <div className="header-title-conainer">
           <div className="left">
             <h3 data-testid="recipe-title">{recipe.strMeal}</h3>
-            <span data-testid="recipe-category">{recipe.strCategory}</span>
+            <p data-testid="recipe-category">{recipe.strCategory}</p>
           </div>
           <div className="header-details-btns-container">
             <FavoritedFood recipe={ recipe } />
@@ -110,7 +112,6 @@ export default function FoodInProgress() {
 
         <div className="instructions-container">
           <span data-testid="instructions">{ recipe.strInstructions }</span>
-
         </div>
 
         <div className="btn-start-recipe-container">
