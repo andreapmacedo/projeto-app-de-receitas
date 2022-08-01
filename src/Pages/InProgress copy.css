@@ -88,10 +88,18 @@
   padding: 20px 20px 0 20px;
   background-color: bisque;
   background-color: var(--soft);
+  color: var(--item-dark);
+  
 }
 
 .ingredients-container ul {
   list-style-type: none;
+  
+}
+
+.ingredients-container ul li{
+  /* padding: 5px; */
+  color: var(--item-dark);
 }
 
 .instructions-container {
