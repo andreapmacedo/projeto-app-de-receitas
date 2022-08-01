@@ -141,6 +141,9 @@
   background-color: var(--soft);
   /* width: 181px; */
 }
+.recommended-card span {
+  padding-top: 6px;
+}
 
 .recommended-box {
   /* background-color: aquamarine; */
