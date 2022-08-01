@@ -46,6 +46,7 @@ function Drinks() {
       <Header />
       <Category />
       <div className="item-container">
+      <div className="bcl"></div>
         {dataApiDrinks.length === 1 && typeFilter === 'input' ? handleResponse()
           : dataApiDrinks.map((drink, index) => (
             (index < MAX_QUANTITY_RECIPES)
@@ -55,18 +56,24 @@ function Drinks() {
                 className="card"
                 data-testid={ `${index}-recipe-card` }
               >
-                <img
-                  data-testid={ `${index}-card-img` }
-                  src={ drink.strDrinkThumb }
-                  alt={ drink.strDrinkThumb }
-                />
-                <div className="card-name-container">
-                  <span data-testid={ `${index}-card-name` }>{ drink.strDrink }</span>
-                </div>
+                <div className="card-container">
+                  <div className="card-img-container">
+                    <img
+                      data-testid={ `${index}-card-img` }
+                      src={ drink.strDrinkThumb }
+                      alt={ drink.strDrinkThumb }
+                    />
+                  </div>               
+                    <div 
+                      className="card-name-container">
+                      <span data-testid={ `${index}-card-name` }>{ drink.strDrink }</span>
+                    </div>
+                </div>                
               </div>
             </Link>)
           ))}
       </div>
+      <div className="up-level" ></div>
       <Footer />
     </div>
   );

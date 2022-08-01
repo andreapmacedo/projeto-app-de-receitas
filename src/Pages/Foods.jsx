@@ -56,7 +56,7 @@ function Foods() {
                 data-testid={ `${index}-recipe-card` }
               >
                 <div className="card-container">
-                  <div className="card-img-conainer">
+                  <div className="card-img-container">
                     <img
                       data-testid={ `${index}-card-img` }
                       src={ food.strMealThumb }
@@ -64,8 +64,7 @@ function Foods() {
                     />
                   </div>
                   <div
-                    className="card-name-conainer"
-                  >
+                    className="card-name-container">
                     <span data-testid={ `${index}-card-name` }>{ food.strMeal }</span>
                   </div>
                 </div>
@@ -74,6 +73,7 @@ function Foods() {
           ))
         }
       </div>
+      <div className="up-level" ></div>
       <Footer />
     </div>
   );
