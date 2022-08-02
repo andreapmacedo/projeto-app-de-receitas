@@ -86,8 +86,9 @@ function DoneRecipes() {
               data-testid={ `${index}-horizontal-image` }
               alt={ recipe.name }
             />
-            <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           </Link>
+        </div>
+          <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           <span
             data-testid={ `${index}-horizontal-top-text` }
           >
@@ -107,7 +108,6 @@ function DoneRecipes() {
             <img src={ shareIcon } alt={ shareIcon } />
           </button>
           {getTags(recipe, index)}
-        </div>
       </div>
     );
   }
@@ -122,8 +122,8 @@ function DoneRecipes() {
               src={ recipe.image }
               alt={ recipe.name }
             />
-            <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           </Link>
+          <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           <span
             data-testid={ `${index}-horizontal-top-text` }
           >
