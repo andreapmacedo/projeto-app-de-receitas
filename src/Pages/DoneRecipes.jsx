@@ -179,7 +179,7 @@ function DoneRecipes() {
         </button>
       </div>
       <div className="done-recipes-container">
-        <div className="bcl"></div>
+        <div className="bcl-r"></div>
         {filteredRecipes && filteredRecipes.length > 0
         && filteredRecipes.map((recipe, index) => {
           let result;
