@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import RecipesContext from '../Context/RecipesContext';
+import './InProgress.css'
 
 import IngredientsRecipeFoodInProgress
 from '../Components/IngredientsRecipeFoodInProgress';
@@ -78,27 +79,41 @@ export default function FoodInProgress() {
   };
 
   return (
-    <div>
-      <div key={ recipe.idMeal }>
-        <img
-          data-testid="recipe-photo"
-          src={ recipe.strMealThumb }
-          alt={ recipe.strMealThumb }
-        />
-        <span data-testid="recipe-title">{recipe.strMeal}</span>
-
-        <FavoritedFood recipe={ recipe } />
-
-        <span data-testid="recipe-category">{recipe.strCategory}</span>
-
-        <ul>
-          <IngredientsRecipeFoodInProgress
-            recipe={ recipe }
-            countIngredients={ countIngredients }
+    <div className="in-progress-container" >
+      <div 
+        key={ recipe.idMeal }
+        className="header-details"
+      >
+        <div className="details-image-container">
+          <img
+            className="details-img"
+            data-testid="recipe-photo"
+            src={ recipe.strMealThumb }
+            alt={ recipe.strMealThumb }
           />
-        </ul>
+        </div>
+        <div className="header-title-conainer">
+          <div className="left">
+            <h3 data-testid="recipe-title">{recipe.strMeal}</h3>
+            <p data-testid="recipe-category">{recipe.strCategory}</p>
+          </div>
+          <div className="header-details-btns-container">
+            <FavoritedFood recipe={ recipe } />
+          </div>
+        </div>    
 
-        <span data-testid="instructions">{ recipe.strInstructions }</span>
+        <div className="ingredients-container">
+          <ul>
+            <IngredientsRecipeFoodInProgress
+              recipe={ recipe }
+              countIngredients={ countIngredients }
+            />
+          </ul>
+        </div>
+
+        <div className="instructions-container">
+          <span data-testid="instructions">{ recipe.strInstructions }</span>
+        </div>
 
         <div className="btn-start-recipe-container">
           {console.log('isDisabled', isDisabled)}

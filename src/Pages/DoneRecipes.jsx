@@ -4,6 +4,7 @@ import Header from '../Components/Header';
 import shareIcon from '../images/shareIcon.svg';
 
 import RecipesContext from '../Context/RecipesContext';
+import './DoneRecipes.css';
 
 const copy = require('clipboard-copy');
 
@@ -71,8 +72,13 @@ function DoneRecipes() {
 
   function getFoodCard(recipe, index) {
     return (
-      <div key={ index }>
-        <div>
+      <div 
+        key={ index }
+        className="done-recipes-card"
+      >
+        <div
+          className="done-recipes-card-image"
+        >
           { alertCopyboard && <p>Link copied!</p>}
           <Link to={ `/foods/${recipe.id}` }>
             <img
@@ -80,8 +86,9 @@ function DoneRecipes() {
               data-testid={ `${index}-horizontal-image` }
               alt={ recipe.name }
             />
-            <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           </Link>
+        </div>
+          <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           <span
             data-testid={ `${index}-horizontal-top-text` }
           >
@@ -101,7 +108,6 @@ function DoneRecipes() {
             <img src={ shareIcon } alt={ shareIcon } />
           </button>
           {getTags(recipe, index)}
-        </div>
       </div>
     );
   }
@@ -116,8 +122,8 @@ function DoneRecipes() {
               src={ recipe.image }
               alt={ recipe.name }
             />
-            <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           </Link>
+          <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
           <span
             data-testid={ `${index}-horizontal-top-text` }
           >
@@ -142,9 +148,11 @@ function DoneRecipes() {
     );
   }
   return (
-    <div>
-      <Header />
-      <section>
+    <div className="done-recipes">
+      <div className="explore-header">
+        <Header />
+      </div>
+      <div className="done-recipes-menu">
         <button
           data-testid="filter-by-all-btn"
           type="button"
@@ -166,8 +174,8 @@ function DoneRecipes() {
         >
           Drinks
         </button>
-      </section>
-      <section>
+      </div>
+      <div className="done-recipes-container">
         {filteredRecipes && filteredRecipes.length > 0
         && filteredRecipes.map((recipe, index) => {
           let result;
@@ -178,7 +186,7 @@ function DoneRecipes() {
           }
           return result;
         })}
-      </section>
+      </div>
     </div>
   );
 }

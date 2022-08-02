@@ -5,6 +5,7 @@
   background-color: transparent;
   border: none;
   margin: 10px;
+  text-decoration: none;
 }
 
 .card-container {
@@ -22,7 +23,7 @@
   
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
-  
+  text-decoration: none;
   
 }
 
@@ -49,14 +50,23 @@
   /* width: 160px; */
 }
 
-
 .card-name-container {
   background-color: rgb(249, 247, 242);
   border-radius: 0 0 10px 10px;
   color: brown;
   display: flex;
   justify-content: center;
-  
+  text-decoration: none;
+}
+
+.card-name-container:hover span{
+  text-decoration: none;
+}
+.card-name-container:link span{
+  text-decoration: none;
+}
+.card-name-container:active span{
+  text-decoration: none;
 }
 
 .card-name-container span {
@@ -67,4 +77,6 @@
   text-align: center;
   width: 130px;
   overflow: scroll;
+  text-decoration: none;
 }
+

@@ -54,20 +54,26 @@ function IngredientsRecipeFoodInProgress({ recipe, countIngredients }) {
   }, [inProgressRecipe]);
 
   return (ingredients.map((item, index) => (
-    <div key={ index }>
+    <div key={ index }
+      className="ingredients-in-container"
+      >
       <label
         data-testid={ `${index}-ingredient-step` }
         htmlFor={ index }
       >
+        <div className="box-input">
         <input
           type="checkbox"
           name={ item }
           onChange={ listProgressChange }
           checked={ isChecked(item) }
         />
-        { measure[index]
-          ? `${ingredients[index]} - ${measure[index]}`
-          : `${ingredients[index]}`}
+        </div>
+        <div className="box">
+          { measure[index]
+            ? `${ingredients[index]} - ${measure[index]}`
+            : `${ingredients[index]}`}
+        </div>
       </label>
     </div>))
   );
