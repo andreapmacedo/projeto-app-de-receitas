@@ -1,10 +1,6 @@
 .done-recipes {
   width: 100%;
-  /* top: 0; */
-}
-
-.explore-header {
-  /* top: 0; */
+  /* z-index: 2; */
 }
 
 .done-recipes-menu {
@@ -12,7 +8,7 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--primary);
-  
+  z-index: 2;
 }
 
 .done-recipes-container {
@@ -28,10 +24,23 @@
   /* justify-content: center; */
   align-items: flex-start;
   /* max-width: 250px; */
-  height: 372px;
+  height: 410px;
   margin: 10px;
   background-color: aqua;
-  padding: 10px;
+  background-color: var(--soft-w);
+  color: var(--item-dark);
+  /* padding: 10px; */
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.072), 0 10px 10px rgba(0,0,0,0.072);
+}
+
+.done-recipes-card span {
+  padding-left: 10px;
+}
+
+.done-recipes-card H3 {
+  padding-left: 10px;
 }
 
 .done-recipes-card-image {
@@ -42,22 +51,45 @@
   /* background-color: aqua; */
 }
 
-.done-recipes-card img {
+.done-recipes-card .done-recipes-card-image img {
+  border-radius: 10px 10px 0 0;
   max-width: 250px;
   width: 100%;
   overflow: hidden;
 }
 
-.done-recipes button {
+.done-recipes-card button {
   border: none;
-  background-color: var(--primary);
-  /* width: 50%; */
+  background-color: var(--soft-w);
   color: var(--item-dark);
 }
 
-.explore-content-c3 button {
+.done-recipes-menu button {
   border: none;
   background-color: var(--primary);
-  /* width: 33.33%; */
-  color: brown;
+  color: var(--item-dark);
 }
+
+
+.done-recipes-card .card-bottom {
+padding-left: 8px;
+}
+
+.bcl {
+  position: fixed;
+  background: repeating-linear-gradient(
+    45deg,
+    /* #111fff, */
+    /* var(--primary), */
+    rgb(253, 244, 200),
+    var(--soft) 2px, /* importante */
+    var(--soft) 5px,
+    var(--soft) 2px /* importante */
+    );
+    width: 100%;
+    height: 100vh;
+    /* height: 10000px; */
+    z-index: -1;
+    /* top: 78px; */
+    top: 0px;
+  }
