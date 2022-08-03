@@ -72,6 +72,7 @@ function DoneRecipes() {
 
   function getFoodCard(recipe, index) {
     return (
+      
       <div 
         key={ index }
         className="done-recipes-card"
@@ -88,7 +89,7 @@ function DoneRecipes() {
             />
           </Link>
         </div>
-          <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
+          <h3 data-testid={ `${index}-horizontal-name` }>{recipe.name}</h3>
           <span
             data-testid={ `${index}-horizontal-top-text` }
           >
@@ -99,15 +100,17 @@ function DoneRecipes() {
           >
             {recipe.doneDate}
           </span>
-          <button
-            type="button"
-            data-testid={ `${index}-horizontal-share-btn` }
-            onClick={ () => copyLinkRecipe(recipe.id) }
-            src={ shareIcon }
-          >
-            <img src={ shareIcon } alt={ shareIcon } />
-          </button>
-          {getTags(recipe, index)}
+          <div className="card-bottom">
+            <button
+              type="button"
+              data-testid={ `${index}-horizontal-share-btn` }
+              onClick={ () => copyLinkRecipe(recipe.id) }
+              src={ shareIcon }
+            >
+              <img src={ shareIcon } alt={ shareIcon } />
+            </button>
+            {getTags(recipe, index)}
+          </div>
       </div>
     );
   }
@@ -123,27 +126,27 @@ function DoneRecipes() {
               alt={ recipe.name }
             />
           </Link>
-          <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
-          <span
-            data-testid={ `${index}-horizontal-top-text` }
-          >
-            {`${recipe.category} - ${recipe.alcoholicOrNot}`}
-          </span>
-          <span
-            data-testid={ `${index}-horizontal-done-date` }
-          >
-            {recipe.doneDate}
-          </span>
-          <button
-            type="button"
-            data-testid={ `${index}-horizontal-share-btn` }
-            onClick={ copyLinkRecipe }
-            src={ shareIcon }
-          >
-            <img src={ shareIcon } alt={ shareIcon } />
-          </button>
-          {getTags(recipe, index)}
         </div>
+        <span data-testid={ `${index}-horizontal-name` }>{recipe.name}</span>
+        <span
+          data-testid={ `${index}-horizontal-top-text` }
+        >
+          {`${recipe.category} - ${recipe.alcoholicOrNot}`}
+        </span>
+        <span
+          data-testid={ `${index}-horizontal-done-date` }
+        >
+          {recipe.doneDate}
+        </span>
+        <button
+          type="button"
+          data-testid={ `${index}-horizontal-share-btn` }
+          onClick={ copyLinkRecipe }
+          src={ shareIcon }
+        >
+          <img src={ shareIcon } alt={ shareIcon } />
+        </button>
+          {getTags(recipe, index)}
       </div>
     );
   }
@@ -176,6 +179,7 @@ function DoneRecipes() {
         </button>
       </div>
       <div className="done-recipes-container">
+        <div className="bcl-r"></div>
         {filteredRecipes && filteredRecipes.length > 0
         && filteredRecipes.map((recipe, index) => {
           let result;
