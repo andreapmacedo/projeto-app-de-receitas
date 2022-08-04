@@ -51,7 +51,7 @@ function ExploreRecipesByIngredient() {
   return (
     // <div className="explore">
     <div className="recipes-by-ingredient-page">
-        <div className="bcl"></div>   
+      <div className="bcl"></div>   
       <div className='explore-header' >
         <Header />
       </div>
