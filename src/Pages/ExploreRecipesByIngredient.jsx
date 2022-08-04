@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
+import './Explore.css';
 
 import { getIngredientsFoods } from '../services/dataFoods';
 
@@ -48,50 +49,52 @@ function ExploreRecipesByIngredient() {
   }
 
   return (
-    <div>
+    <div className="recipes-by-ingredient-page">
+      <div className="bcl"></div>
       <Header />
-      { foodsOrDrinks === 'foods' ? (
-        ingredients.map((ingredient, index) => (
-          <Link
-            key={ ingredient.idIngredient }
-            onClick={ () => invitePrincipal(ingredient.strIngredient) }
-            to="/foods"
-          >
-            <div data-testid={ `${index}-ingredient-card` }>
-              <img
-                data-testid={ `${index}-card-img` }
-                src={ getImageIngredient(ingredient.strIngredient) }
-                alt={ ingredient.strIngredient }
-              />
-              <span
-                data-testid={ `${index}-card-name` }
-              >
-                { ingredient.strIngredient }
-              </span>
-            </div>
-          </Link>))
-      ) : (
-        ingredients.map((ingredient, index) => (
-          <Link
-            key={ ingredient.strIngredient1 }
-            onClick={ () => invitePrincipal(ingredient.strIngredient1) }
-            to="/drinks"
-          >
-            <div data-testid={ `${index}-ingredient-card` }>
-              <img
-                data-testid={ `${index}-card-img` }
-                src={ getImageIngredient(ingredient.strIngredient1) }
-                alt={ ingredient.strIngredient1 }
-              />
-              <span
-                data-testid={ `${index}-card-name` }
-              >
-                { ingredient.strIngredient1 }
-              </span>
-            </div>
-          </Link>))
-      )}
-
+      <div className="recipes-by-ingredient-container">
+        { foodsOrDrinks === 'foods' ? (
+          ingredients.map((ingredient, index) => (
+            <Link
+              key={ ingredient.idIngredient }
+              onClick={ () => invitePrincipal(ingredient.strIngredient) }
+              to="/foods"
+            >
+              <div className="ingredient-card" data-testid={ `${index}-ingredient-card` }>
+                <img
+                  data-testid={ `${index}-card-img` }
+                  src={ getImageIngredient(ingredient.strIngredient) }
+                  alt={ ingredient.strIngredient }
+                />
+                <span
+                  data-testid={ `${index}-card-name` }
+                >
+                  { ingredient.strIngredient }
+                </span>
+              </div>
+            </Link>))
+        ) : (
+          ingredients.map((ingredient, index) => (
+            <Link
+              key={ ingredient.strIngredient1 }
+              onClick={ () => invitePrincipal(ingredient.strIngredient1) }
+              to="/drinks"
+            >
+              <div data-testid={ `${index}-ingredient-card` }>
+                <img
+                  data-testid={ `${index}-card-img` }
+                  src={ getImageIngredient(ingredient.strIngredient1) }
+                  alt={ ingredient.strIngredient1 }
+                />
+                <span
+                  data-testid={ `${index}-card-name` }
+                >
+                  { ingredient.strIngredient1 }
+                </span>
+              </div>
+            </Link>))
+        )}
+      </div>
       <Footer />
     </div>
   );

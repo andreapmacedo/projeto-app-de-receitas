@@ -51,6 +51,14 @@ export default function FoodDetails() {
     }
   }, []);
 
+  const getClassName = (status) => {
+    console.log('status', status);
+    if (status === 'Start Recipe') {
+      return 'btn-start-recipe';
+    }
+    return 'btn-continue-recipe';
+  }
+
   return (
     <div className="details-container">
       <div

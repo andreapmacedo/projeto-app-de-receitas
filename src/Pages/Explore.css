@@ -26,3 +26,52 @@
   /* width: 33.33%; */
   color: brown;
 }
+
+
+.recipes-by-ingredient-page {
+  width: 100%;
+  /* background-color: var(--soft); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  /* align-items: center; */
+  height: 100vh;
+}
+
+.recipes-by-ingredient-container-s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  height: 178px;
+  height: 100%;
+  width: 160px;
+  /* margin: 4px; */
+  /* padding: 4px; */
+  background-color: transparent;
+  /* background-color: aqua; */
+  
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
+  text-decoration: none;
+}
+
+.recipes-by-ingredient-page .bcl {
+  z-index: -1;
+}
+
+.ingredient-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  /* background-color: aqua; */
+  border: none;
+  margin: 10px;
+  text-decoration: none;
+  z-index: 2;
+}
