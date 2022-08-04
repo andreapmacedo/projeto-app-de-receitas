@@ -118,7 +118,8 @@ export default function FoodInProgress() {
         <div className="btn-start-recipe-container">
           {console.log('isDisabled', isDisabled)}
           <button
-            className="btn-start-recipe"
+            // className="btn-start-recipe"
+            className={ isDisabled ? 'btn-finish-recipe-disabled' : 'btn-finish-recipe-active' }
             data-testid="finish-recipe-btn"
             type="button"
             onClick={ doneRecipe }

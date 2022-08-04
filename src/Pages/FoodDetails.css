@@ -172,21 +172,44 @@
 
 }
 
-.btn-start-recipe {
+
+
+.btn-finish-recipe-active, .btn-start-recipe {
+  position: fixed;
+  align-items: center;
   background-color: rgb(108, 203, 108);
   border: none;
   bottom: 0;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #fff;
   display: flex;
   font-size: 1.2rem;
   font-style: oblique;
   justify-content: center;
+  height: 60px;
   padding: 10px;
   position: fixed;
   width: 100%;
-  /* width: 360px; */
 }
+
+.btn-finish-recipe-disabled  {
+  background-color: rgb(209, 251, 209);
+  align-items: center;
+  border: none;
+  bottom: 0;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  color: #ddd;
+  display: flex;
+  font-size: 1.2rem;
+  font-style: oblique;
+  justify-content: center;
+  height: 60px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
 
 .up-level {
   /* background-color: aqua; */
