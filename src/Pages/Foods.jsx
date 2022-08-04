@@ -39,6 +39,7 @@ function Foods() {
     }
   }, []);
 
+  
   const MAX_QUANTITY_RECIPES = 12;
   return (
     <div className="foods">

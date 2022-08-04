@@ -65,7 +65,7 @@ export default function FoodDetails() {
             alt={ recipe.strMealThumb }
           />
         </div>
-        <div className="header-title-conainer">
+        <div className="header-title-container">
           <div className="left">
             <h3 data-testid="recipe-title">{recipe.strMeal}</h3>
             <p data-testid="recipe-category">{recipe.strCategory}</p>

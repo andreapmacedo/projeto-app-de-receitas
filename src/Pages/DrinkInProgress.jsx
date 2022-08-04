@@ -15,6 +15,7 @@ export default function DrinkInProgress() {
   const history = useHistory();
 
   const [recipe, setRecipe] = useState({});
+  const [isDisabled, setIsDisabled] = useState(true);
   const [allChecked, setAllChecked] = useState(true);
   const {
     setDoneRecipes,
@@ -74,8 +75,10 @@ export default function DrinkInProgress() {
   const countIngredients = (checked, total) => {
     if (total > 0 && checked === total) {
       setAllChecked(false);
+      setIsDisabled(false);
     } else {
       setAllChecked(true);
+      setIsDisabled(true);
     }
   };
 
@@ -90,7 +93,7 @@ export default function DrinkInProgress() {
           alt={ recipe.strDrinkThumb }
         />
       </div>
-      <div className="header-title-conainer">
+      <div className="header-title-container">
         <div className="left">
           <h3 data-testid="recipe-title">{recipe.strDrink}</h3>
           <p data-testid="recipe-category">{recipe.strAlcoholic}</p>

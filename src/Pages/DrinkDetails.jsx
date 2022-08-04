@@ -65,7 +65,7 @@ export default function DrinkDetails() {
               alt={ recipe.strDrinkThumb }
             />
           </div>
-          <div className="header-title-conainer">
+          <div className="header-title-container">
             <div className="left">  
               <h3 data-testid="recipe-title">{recipe.strDrink}</h3>
               <p data-testid="recipe-category">{recipe.strAlcoholic}</p>
@@ -74,7 +74,7 @@ export default function DrinkDetails() {
               <FavoritedDrink recipe={ recipe } />
             </div>
           </div>
-
+          </div>
           <div className="ingredients-container">
             <ul>
               <IngredientsRecipe recipe={ recipe } />
@@ -108,7 +108,7 @@ export default function DrinkDetails() {
             </button>
           )}
         </div>
-      </div>
+      
     </div>
   );
 }

@@ -54,9 +54,10 @@ function IngredientsRecipeFoodInProgress({ recipe, countIngredients }) {
   }, [inProgressRecipe]);
 
   return (ingredients.map((item, index) => (
-    <div key={ index }
+    <div 
+      key={ index }
       className="ingredients-in-container"
-      >
+    >
       <label
         data-testid={ `${index}-ingredient-step` }
         htmlFor={ index }

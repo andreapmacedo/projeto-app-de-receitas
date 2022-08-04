@@ -81,8 +81,7 @@ export default function FoodInProgress() {
   return (
     <div className="in-progress-container" >
       <div 
-        key={ recipe.idMeal }
-        className="header-details">
+        key={ recipe.idMeal } className="header-details">
         <div className="details-image-container">
           <img
             className="details-img"
@@ -91,7 +90,7 @@ export default function FoodInProgress() {
             alt={ recipe.strMealThumb }
           />
         </div>
-        <div className="header-title-conainer">
+        <div className="header-title-container">
           <div className="left">
             <h3 data-testid="recipe-title">{recipe.strMeal}</h3>
             <p data-testid="recipe-category">{recipe.strCategory}</p>

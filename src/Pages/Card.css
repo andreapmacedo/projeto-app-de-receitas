@@ -16,15 +16,12 @@
   height: 178px;
   height: 100%;
   width: 160px;
-  /* margin: 4px; */
-  /* padding: 4px; */
-  background-color: transparent;
-  /* background-color: aqua; */
   
+  background-color: transparent;
+    
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
   text-decoration: none;
-  
 }
 
 .card-img-container {
@@ -42,12 +39,8 @@
 }
 
 .card-img-container img {
-  /* border-radius: 10px; */
-  /* box-shadow: 2px 2px; */
-  /* max-width: 110px; */
   width: 100%;
   overflow: hidden;
-  /* width: 160px; */
 }
 
 .card-name-container {

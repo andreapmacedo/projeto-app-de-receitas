@@ -13,12 +13,10 @@
   align-items: center;
   background-color: rgb(242, 237, 214);
   
-  /* border-radius: 10px 10px 0 0; */
   display: flex;
   height: 120px;
   overflow: hidden;
-  /* padding-bottom: 5px; */
-  /* padding-top: 5px; */
+  
   height: 300px;
   width: 100%;
 }
@@ -59,6 +57,7 @@
   /* background-color: rgb(251, 241, 218); */
   padding: 2px 12px 2px 12px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.072), 0 10px 10px rgba(0,0,0,0.072);
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   width: 100%;
   color: var(--item-dark);
 }
