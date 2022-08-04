@@ -51,20 +51,12 @@ export default function FoodDetails() {
     }
   }, []);
 
-  const getClassName = (status) => {
-    console.log('status', status);
-    if (status === 'Start Recipe') {
-      return 'btn-start-recipe';
-    }
-    return 'btn-continue-recipe';
-  }
 
   return (
     <div className="details-container">
       <div
         className="header-details"
-        key={ recipe.idMeal }
-      >
+        key={ recipe.idMeal }>
         <div className="details-image-container">
           <img
             className="details-img"
@@ -72,13 +64,10 @@ export default function FoodDetails() {
             src={ recipe.strMealThumb }
             alt={ recipe.strMealThumb }
           />
-
         </div>
         <div className="header-title-conainer">
           <div className="left">
-            <h3 data-testid="recipe-title">
-              {recipe.strMeal}
-            </h3>
+            <h3 data-testid="recipe-title">{recipe.strMeal}</h3>
             <p data-testid="recipe-category">{recipe.strCategory}</p>
           </div>
           <div className="header-details-btns-container">

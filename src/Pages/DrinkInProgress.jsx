@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import RecipesContext from '../Context/RecipesContext';
+import './InProgress.css'
 
 import IngredientsRecipeDrinkInProgress
 from '../Components/IngredientsRecipeDrinkInProgress';
@@ -79,30 +80,41 @@ export default function DrinkInProgress() {
   };
 
   return (
-    <div>
-      <div key={ recipe.idDrink }>
+    <div className="in-progress-container" >
+      <div key={ recipe.idDrink } className="header-details">
+      <div className="details-image-container">
         <img
+          className="details-img"
           data-testid="recipe-photo"
           src={ recipe.strDrinkThumb }
           alt={ recipe.strDrinkThumb }
         />
-        <span data-testid="recipe-title">{recipe.strDrink}</span>
-        <span data-testid="recipe-category">{recipe.strAlcoholic}</span>
-
-        <FavoritedDrink recipe={ recipe } />
-
+      </div>
+      <div className="header-title-conainer">
+        <div className="left">
+          <h3 data-testid="recipe-title">{recipe.strDrink}</h3>
+          <p data-testid="recipe-category">{recipe.strAlcoholic}</p>
+        </div>
+        <div className="header-details-btns-container">
+          <FavoritedDrink recipe={ recipe } />
+        </div>
+      </div>
+      <div className="ingredients-container">
         <ul>
           <IngredientsRecipeDrinkInProgress
             recipe={ recipe }
             countIngredients={ countIngredients }
           />
         </ul>
-
+      </div>
+      <div className="instructions-container">
         <span data-testid="instructions">{ recipe.strInstructions }</span>
+      </div>
 
         <div className="btn-start-recipe-container">
           <button
-            className="btn-start-recipe"
+            // className="btn-start-recipe"
+            className={ isDisabled ? 'btn-finish-recipe-disabled' : 'btn-finish-recipe-active' }
             data-testid="finish-recipe-btn"
             type="button"
             onClick={ doneRecipe }

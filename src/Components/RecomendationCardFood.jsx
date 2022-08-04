@@ -41,9 +41,7 @@ export default function RecomendationCardFood() {
 
   return (
     <div>
-      {/* <div className="recommended-card-return"> */}
-        {setRecommendedCard()}
-      {/* </div> */}
+      {setRecommendedCard()}
     </div>
   );
 }

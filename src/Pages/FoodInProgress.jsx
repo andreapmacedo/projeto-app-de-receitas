@@ -82,8 +82,7 @@ export default function FoodInProgress() {
     <div className="in-progress-container" >
       <div 
         key={ recipe.idMeal }
-        className="header-details"
-      >
+        className="header-details">
         <div className="details-image-container">
           <img
             className="details-img"
