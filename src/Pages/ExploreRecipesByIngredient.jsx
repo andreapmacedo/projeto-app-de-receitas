@@ -86,17 +86,20 @@ function ExploreRecipesByIngredient() {
               onClick={ () => invitePrincipal(ingredient.strIngredient1) }
               to="/drinks"
             >
-              <div data-testid={ `${index}-ingredient-card` }>
+              <div className="ingredient-card" data-testid={ `${index}-ingredient-card` }>
                 <img
+                  className="card-img-container"
                   data-testid={ `${index}-card-img` }
                   src={ getImageIngredient(ingredient.strIngredient1) }
                   alt={ ingredient.strIngredient1 }
                 />
-                <span
-                  data-testid={ `${index}-card-name` }
-                >
-                  { ingredient.strIngredient1 }
-                </span>
+                <div className="card-name-container">
+                  <span
+                    data-testid={ `${index}-card-name` }
+                  >
+                    { ingredient.strIngredient1 }
+                  </span>
+                </div>
               </div>
             </Link>))
         )}

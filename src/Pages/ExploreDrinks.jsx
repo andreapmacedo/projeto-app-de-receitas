@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { getRandomRecipeDrinks } from '../services/dataDrinks';
+import './Explore.css';
 
 function ExploreDrinks() {
   const history = useHistory();

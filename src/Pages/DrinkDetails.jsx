@@ -83,7 +83,7 @@ export default function DrinkDetails() {
           <div className="instructions-container">
             <span data-testid="instructions">{ recipe.strInstructions }</span>
           </div>
-          <div className="yt-frame">
+          {/* <div className="yt-frame">
             <iframe
               src={ `https://www.youtube.com/embed/${recipe?.strYoutube?.split('=')[1]}` }
               data-testid="video"
@@ -91,10 +91,10 @@ export default function DrinkDetails() {
               width="360"
               heigth="420"
             />
+          </div> */}
             <div className="recommended">
               <RecomendationCardDrink />
             </div>
-          </div>
 
         <div className="btn-start-recipe-container">
           {!(verifyRecipe(localDone, id)) && (
