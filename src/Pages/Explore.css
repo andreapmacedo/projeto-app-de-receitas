@@ -1,21 +1,37 @@
 .explore {
   width: 100%;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .recipes-by-ingredient-pages {
-  /* top: 0; */
   width: 100%;
-  /* display: flex; */
-  /* background-color: aqua; */
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 .explore-header {
   width: 100%;
+}
+
+.user-container {
+  display: flex;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--item-dark);
+  align-items: center;
+  justify-content: center;
+}
+
+.user-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 2.5rem; */
+  /* font-weight: bold; */
+  color: var(--item-dark);
+  /* margin-bottom: 1rem; */
+  /* text-align: center; */
 }
 
 .explore-content {
@@ -27,11 +43,6 @@
 
 .recipes-by-ingredient-container {
   width: 100%;
-  /* background-color: antiquewhite; */
-  /* background-color: white; */
-  /* background-color: var(--soft); */
-  /* background-color: var(--primary); */
-  /* background-color: aqua; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,7 +55,56 @@
   border: none;
   background-color: var(--primary);
   /* width: 50%; */
-  color: brown;
+  color: var(--item-dark);
+}
+
+.profile-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--soft);
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.profile-btn-container {
+  width: 50%;
+  margin-top: 50px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
+  border-radius: 3px;
+  
+
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  /* height: 80px; */
+
+}
+
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profile-btn {
+    /* width: 100%; */
+    /* height: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    font-size: 1.2em;
+    /* border-radius: 3px; */
+  background-color: var(--primary);
+  color: var(--item-dark);
 }
 
 .explore-content-c3 button {

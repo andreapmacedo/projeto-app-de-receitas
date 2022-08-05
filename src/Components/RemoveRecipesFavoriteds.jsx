@@ -57,7 +57,7 @@ export default function RemoveRecipesFavoriteds({ id, index, type }) {
   }
 
   return (
-    <div>
+    <div className="card-remove-favoriteds" >
       <button
         type="button"
         data-testid={ `${index}-horizontal-share-btn` }
