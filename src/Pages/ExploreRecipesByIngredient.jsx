@@ -49,9 +49,12 @@ function ExploreRecipesByIngredient() {
   }
 
   return (
+    // <div className="explore">
     <div className="recipes-by-ingredient-page">
-      <div className="bcl"></div>
-      <Header />
+      <div className="bcl"></div>   
+      <div className='explore-header' >
+        <Header />
+      </div>
       <div className="recipes-by-ingredient-container">
         { foodsOrDrinks === 'foods' ? (
           ingredients.map((ingredient, index) => (
@@ -62,15 +65,18 @@ function ExploreRecipesByIngredient() {
             >
               <div className="ingredient-card" data-testid={ `${index}-ingredient-card` }>
                 <img
+                  className="card-img-container"
                   data-testid={ `${index}-card-img` }
                   src={ getImageIngredient(ingredient.strIngredient) }
                   alt={ ingredient.strIngredient }
                 />
-                <span
-                  data-testid={ `${index}-card-name` }
-                >
-                  { ingredient.strIngredient }
-                </span>
+                <div className="card-name-container">
+                  <span
+                    data-testid={ `${index}-card-name` }
+                  >
+                    { ingredient.strIngredient }
+                  </span>
+                </div>
               </div>
             </Link>))
         ) : (
@@ -80,17 +86,20 @@ function ExploreRecipesByIngredient() {
               onClick={ () => invitePrincipal(ingredient.strIngredient1) }
               to="/drinks"
             >
-              <div data-testid={ `${index}-ingredient-card` }>
+              <div className="ingredient-card" data-testid={ `${index}-ingredient-card` }>
                 <img
+                  className="card-img-container"
                   data-testid={ `${index}-card-img` }
                   src={ getImageIngredient(ingredient.strIngredient1) }
                   alt={ ingredient.strIngredient1 }
                 />
-                <span
-                  data-testid={ `${index}-card-name` }
-                >
-                  { ingredient.strIngredient1 }
-                </span>
+                <div className="card-name-container">
+                  <span
+                    data-testid={ `${index}-card-name` }
+                  >
+                    { ingredient.strIngredient1 }
+                  </span>
+                </div>
               </div>
             </Link>))
         )}

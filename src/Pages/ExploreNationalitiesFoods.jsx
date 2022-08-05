@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
+import './Explore.css';
 
 import apiFoods, { getNationalities, getRecipesNationality } from '../services/dataFoods';
 
@@ -45,37 +46,45 @@ function ExploreNationalitiesFoods() {
   }
 
   return (
-    <div>
-      <Header />
-      <div>
-        <select data-testid="explore-by-nationality-dropdown" onChange={ getCards }>
-          <option data-testid="All-option" value="All-option" selected>
-            All
-          </option>
-          { dataNationalities.map((nationality) => (
-            <option
-              key={ nationality.strArea }
-              data-testid={ `${nationality.strArea}-option` }
-              value={ nationality.strArea }
-            >
-              { nationality.strArea }
-            </option>
-          )) }
-        </select>
+    <div className="recipes-by-ingredient-page">
+      <div className="bcl"></div>
+      <div className='explore-header' >
+        <Header />
       </div>
-
-      { dataFoods.map((item, index) => (
-        <Link key={ item.idMeal } to={ `/foods/${item.idMeal}` }>
-          <div data-testid={ `${index}-recipe-card` }>
-            <img
-              data-testid={ `${index}-card-img` }
-              src={ item.strMealThumb }
-              alt={ item.strMealThumb }
-            />
-            <span data-testid={ `${index}-card-name` }>{item.strMeal}</span>
-          </div>
-        </Link>
-      )) }
+      
+        <div className="select">
+          <select data-testid="explore-by-nationality-dropdown" onChange={ getCards }>
+            <option data-testid="All-option" value="All-option" selected>
+              All
+            </option>
+            { dataNationalities.map((nationality) => (
+              <option
+                key={ nationality.strArea }
+                data-testid={ `${nationality.strArea}-option` }
+                value={ nationality.strArea }
+              >
+                { nationality.strArea }
+              </option>
+            )) }
+          </select>
+        </div>
+      <div className="recipes-by-ingredient-container">
+        { dataFoods.map((item, index) => (
+          <Link key={ item.idMeal } to={ `/foods/${item.idMeal}` }>
+            <div className="ingredient-card" data-testid={ `${index}-recipe-card` }>
+              <img
+                className="card-img-container"
+                data-testid={ `${index}-card-img` }
+                src={ item.strMealThumb }
+                alt={ item.strMealThumb }
+                />
+              <div className="card-name-container">
+                <span data-testid={ `${index}-card-name` }>{item.strMeal}</span>
+              </div>
+            </div>
+          </Link>
+        )) }
+      </div>
 
       <Footer />
     </div>

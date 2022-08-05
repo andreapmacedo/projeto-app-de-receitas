@@ -53,24 +53,48 @@ export default function DrinkDetails() {
   }, []);
 
   return (
-    <div>
-      <div key={ recipe.idDrink }>
-        <img
-          data-testid="recipe-photo"
-          src={ recipe.strDrinkThumb }
-          alt={ recipe.strDrinkThumb }
-        />
-        <span data-testid="recipe-title">{recipe.strDrink}</span>
-        <span data-testid="recipe-category">{recipe.strAlcoholic}</span>
-
-        <FavoritedDrink recipe={ recipe } />
-
-        <ul>
-          <IngredientsRecipe recipe={ recipe } />
-        </ul>
-        <span data-testid="instructions">{ recipe.strInstructions }</span>
-
-        <RecomendationCardDrink />
+    <div className="details-container">
+      <div 
+        className="header-details"
+        key={ recipe.idDrink }>
+          <div className="details-image-container">
+            <img
+              className="details-img"
+              data-testid="recipe-photo"
+              src={ recipe.strDrinkThumb }
+              alt={ recipe.strDrinkThumb }
+            />
+          </div>
+          <div className="header-title-container">
+            <div className="left">  
+              <h3 data-testid="recipe-title">{recipe.strDrink}</h3>
+              <p data-testid="recipe-category">{recipe.strAlcoholic}</p>
+            </div>
+            <div className="header-details-btns-container"> 
+              <FavoritedDrink recipe={ recipe } />
+            </div>
+          </div>
+          </div>
+          <div className="ingredients-container">
+            <ul>
+              <IngredientsRecipe recipe={ recipe } />
+            </ul>
+          </div>
+          <div className="instructions-container">
+            <span data-testid="instructions">{ recipe.strInstructions }</span>
+          </div>
+          {/* <div className="yt-frame">
+            <iframe
+              src={ `https://www.youtube.com/embed/${recipe?.strYoutube?.split('=')[1]}` }
+              data-testid="video"
+              title="video player"
+              width="360"
+              heigth="420"
+            />
+          </div> */}
+            <div className="recommended">
+              <RecomendationCardDrink />
+            </div>
 
         <div className="btn-start-recipe-container">
           {!(verifyRecipe(localDone, id)) && (
@@ -84,7 +108,7 @@ export default function DrinkDetails() {
             </button>
           )}
         </div>
-      </div>
+      
     </div>
   );
 }

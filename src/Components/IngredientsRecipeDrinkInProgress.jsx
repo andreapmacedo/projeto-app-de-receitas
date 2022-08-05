@@ -42,7 +42,6 @@ function IngredientsRecipeDrinkInProgress({ recipe, countIngredients }) {
   const ingredients = filterIngredientsAndMeasures(recipe, 'strIngredient');
   const measure = filterIngredientsAndMeasures(recipe, 'strMeasure');
 
-  // ///////////
   useEffect(() => {
     if (local) {
       const test = { ...local,
@@ -56,7 +55,10 @@ function IngredientsRecipeDrinkInProgress({ recipe, countIngredients }) {
   }, [inProgressRecipe]);
 
   return (ingredients.map((item, index) => (
-    <div key={ index }>
+    <div 
+      key={ index }
+      className="ingredients-in-container"
+    >
       <label data-testid={ `${index}-ingredient-step` } htmlFor={ index }>
         <input
           id={ index }

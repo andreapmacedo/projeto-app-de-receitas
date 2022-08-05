@@ -37,10 +37,12 @@
 
 .done-recipes-card span {
   padding-left: 10px;
+  max-width: 250px;
 }
 
 .done-recipes-card H3 {
   padding-left: 10px;
+  max-width: 250px;
 }
 
 .done-recipes-card-image {

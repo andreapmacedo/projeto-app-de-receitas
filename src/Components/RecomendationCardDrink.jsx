@@ -7,13 +7,13 @@ export default function RecomendationCardDrink() {
 
   function setRecommendedCard() {
     return (
-      <div>
+      <div className="recommended-box">
         <h1>Recommended</h1>
-        <div className="recomended-card-container">
+        <div className="recommended-card-container">
           {recommended.map((food, index) => (
             <div
               key={ index }
-              className="recomended-card"
+              className="recommended-card"
               data-testid={ `${index}-recomendation-card` }
             >
               <img
@@ -41,9 +41,7 @@ export default function RecomendationCardDrink() {
 
   return (
     <div>
-      <div className="recommended-card">
-        {setRecommendedCard()}
-      </div>
+      {setRecommendedCard()}
     </div>
   );
 }
