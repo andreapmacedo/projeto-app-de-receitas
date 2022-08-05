@@ -45,11 +45,18 @@
   max-width: 250px;
 }
 
-.done-recipes-card-image {
-  /* width: 100%; */
-  /* height: 200px; */
-  /* object-fit: cover; */
-  /* overflow: hidden; */
+.done-recipes-card .card-bottom {
+  /* background-color: var(--soft-w); */
+  color: var(--item-dark);
+  max-width: 250px;
+}
+
+.card-remove-favoriteds {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   /* background-color: aqua; */
 }
 

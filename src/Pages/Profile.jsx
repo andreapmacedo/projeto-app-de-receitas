@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import './Explore.css';
+import { SignOut, HeartStraight, Check  } from 'phosphor-react';
 
 function Profile() {
   const deleteItens = () => {
@@ -22,6 +23,9 @@ function Profile() {
       <div className="profile-content">
         <div className="profile-btn-container">
           <Link to="/done-recipes">
+            <div className="profile-icon">
+              <Check size={44} color="#a72f2f" />
+            </div>
             <button 
               data-testid="profile-done-btn"
               type="submit"
@@ -33,6 +37,9 @@ function Profile() {
         </div>
         <div className="profile-btn-container">
         <Link to="/favorite-recipes">
+        <div className="profile-icon">
+          <HeartStraight size={44} color="#a72f2f" />
+        </div>
           <button 
             data-testid="profile-favorite-btn"
             type="submit"
@@ -44,6 +51,9 @@ function Profile() {
         </div>
         <div className="profile-btn-container">
           <Link to="/"> 
+          <div className="profile-icon">
+            <SignOut size={44} color="#a72f2f" />
+          </div>
             <button
               className="profile-btn"
               data-testid="profile-logout-btn"

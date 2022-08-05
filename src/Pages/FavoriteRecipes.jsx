@@ -7,6 +7,9 @@ import RecipesContext from '../Context/RecipesContext';
 
 import Header from '../Components/Header';
 
+import './Explore.css';
+import './DoneRecipes.css';
+
 function FavoriteRecipes() {
   const {
     setFavoriteRecipes,
@@ -17,34 +20,41 @@ function FavoriteRecipes() {
   function listFavoriteRecipes() {
     if (favoriteRecipes) {
       const favoriteRecipe = favoriteRecipes.map((recipe, index) => (
-        <div key={ recipe.id }>
-          <Link
-            to={ recipe.type === 'food' ? `/foods/${recipe.id}` : `/drinks/${recipe.id}` }
+        <div className="done-recipes-container">
+          <div key={ recipe.id }
+            className="done-recipes-card"
           >
-            <div>
-              <img
-                data-testid={ `${index}-horizontal-image` }
-                src={ recipe.image }
-                alt={ recipe.image }
-              />
-              <h5 data-testid={ `${index}-horizontal-name` }>{ recipe.name }</h5>
-              <span
-                data-testid={ `${index}-horizontal-top-text` }
+              <Link
+                to={ recipe.type === 'food' ? `/foods/${recipe.id}` : `/drinks/${recipe.id}` }
               >
-                { recipe.type === 'food'
-                  ? `${recipe.nationality} - ${recipe.category}`
-                  : `${recipe.alcoholicOrNot}`}
-              </span>
-            </div>
-          </Link>
-          <RemoveRecipesFavoriteds
-            id={ recipe.id }
-            index={ index }
-            type={ recipe.type }
-          />
+                <div className="done-recipes-card-image">
+                  <img
+                    data-testid={ `${index}-horizontal-image` }
+                    src={ recipe.image }
+                    alt={ recipe.image }
+                  />
+                  </div>
+                  <div className="card-bottom">
+                    <h3 data-testid={ `${index}-horizontal-name` }>{ recipe.name }</h3>
+                    <span
+                      data-testid={ `${index}-horizontal-top-text` }
+                    >
+                      { recipe.type === 'food'
+                        ? `${recipe.nationality} - ${recipe.category}`
+                        : `${recipe.alcoholicOrNot}`}
+                    </span>
+                  </div>
+              </Link>
+            <RemoveRecipesFavoriteds
+              id={ recipe.id }
+              index={ index }
+              type={ recipe.type }
+            />
+          </div>
         </div>
       ));
-      return favoriteRecipe;
+      
+        return favoriteRecipe;
     }
   }
 
@@ -73,9 +83,12 @@ function FavoriteRecipes() {
   }, [changeFavorites]);
 
   return (
-    <div>
-      <Header />
-      <div>
+    <div className="explore">
+      <div className='explore-header' >
+        <Header />
+      </div>
+      <div className="explore-content">
+        <div className="bcl-r"></div>
         <button
           data-testid="filter-by-all-btn"
           name="All"
