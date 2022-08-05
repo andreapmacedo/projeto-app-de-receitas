@@ -103,6 +103,7 @@
   /* width: 500px; */
   background-color: beige;
   background-color: var(--soft);
+  
 }
 
 .recommended h1 {
@@ -126,6 +127,8 @@
   border: none;
   width: 100%;
   padding: 20px;
+  height: 300px;
+  max-width: 600px;
 }
 
 .recommended-card-container {
@@ -136,6 +139,7 @@
   width: 100%;
   height: 200px;
   /* background-color: red; */
+  margin-bottom: 50px;
 }
 
 .recommended-card {
