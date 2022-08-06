@@ -1,10 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import Drinks from '../images/drinkIcon.svg';
 import Explore from '../images/exploreIcon.svg';
 import Food from '../images/mealIcon.svg';
+import RecipesContext from '../Context/RecipesContext';
 import './Footer.css';
 import { ForkKnife, Wine, ArrowsOutCardinal } from 'phosphor-react';
 
@@ -12,8 +13,13 @@ function Footer() {
   // console.log('Footer');
 
   const history = useHistory();
+
+  const {
+    setActivedBtn,
+    activedBtn,
+  } = useContext(RecipesContext);
   
-  const [activedBtn, setActivedBtn] = useState('foods');
+  // const [activedBtn, setActivedBtn] = useState('foods');
 
   // const script = () => {
   //   const list = document.querySelectorAll('.list');
@@ -81,7 +87,7 @@ function Footer() {
               >
                 {/* <img alt="drinks" src={ Drinks } /> */}
                 {/* <Wine size={36} color="#a01818" /> */}
-                {activedBtn === 'explore' ? <Wine size={36} color="#a01818" />  : <Wine size={36} color="#ffffff" />}
+                {activedBtn === 'drinks' ? <Wine size={36} color="#ffffff" />  : <Wine size={36} color="#a01818" />}
               </button>
             </span>
             <span className="text">Drinks</span>
@@ -105,7 +111,7 @@ function Footer() {
               >
                 {/* <img alt="drinks" src={ Explore } /> */}
                 {/* <ArrowsOutCardinal size={36} color="#a01818" /> */}
-                {activedBtn === 'explore' ? <ArrowsOutCardinal size={36} color="#a01818" />  : <ArrowsOutCardinal size={36} color="#ffffff" />}
+                {activedBtn === 'explore' ? <ArrowsOutCardinal size={36} color="#ffffff" />  : <ArrowsOutCardinal size={36} color="#a01818" />}
               </button>
             </span>
               <span className="text">Explore</span>         
@@ -128,7 +134,7 @@ function Footer() {
                 // onClick={ () => setRoute('foods') }
               >
                 {/* <img alt="drinks" src={ Food } /> */}
-                { activedBtn === 'foods' ? <ForkKnife size={36} color="#a01818" /> : <ForkKnife size={36} color="#ffffff" /> }
+                { activedBtn === 'foods' ? <ForkKnife size={36} color="#ffffff" /> : <ForkKnife size={36} color="#a01818" /> }
                 {/* <ForkKnife size={36} color="#a01818" /> */}
               </button>
             </span>
