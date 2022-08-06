@@ -7,6 +7,7 @@ import './Explore.css';
 function Explore() {
   return (
     <div className="explore">
+      <div className="bcl"></div>
       <div className='explore-header' >
         <Header />
       </div>
