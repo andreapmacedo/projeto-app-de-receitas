@@ -6,6 +6,7 @@ import imgSearch from '../images/searchIcon.svg';
 import SearchMenu from './SearchMenu';
 import './Header.css';
 import { shape } from 'prop-types';
+import { MagnifyingGlass, User } from 'phosphor-react';
 
 function Header() {
   const history = useHistory();
@@ -58,7 +59,8 @@ function Header() {
             onClick={ handleProfile }
             src={ imgProfile }
           >
-            <img src={ imgProfile } alt="Profile" />
+            {/* <img src={ imgProfile } alt="Profile" /> */}
+            <User size={36} color="#a01818" />
           </button>
 
           <h3
@@ -81,7 +83,8 @@ function Header() {
                 onClick={ handleShowInput }
                 src={ imgSearch }
               >
-                <img src={ imgSearch } alt="Search" />
+                {/* <img src={ imgSearch } alt="Search" /> */}
+                <MagnifyingGlass size={38} color="#a01818" />
               </button>
             // ) : null}
             ) : <div className="null-space" ></div>}

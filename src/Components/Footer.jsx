@@ -1,17 +1,20 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import Drinks from '../images/drinkIcon.svg';
 import Explore from '../images/exploreIcon.svg';
 import Food from '../images/mealIcon.svg';
 import './Footer.css';
+import { ForkKnife, Wine, ArrowsOutCardinal } from 'phosphor-react';
 
 function Footer() {
   // console.log('Footer');
 
   const history = useHistory();
   
+  const [activedBtn, setActivedBtn] = useState('foods');
+
   // const script = () => {
   //   const list = document.querySelectorAll('.list');
   //   function activelink() {
@@ -25,8 +28,8 @@ function Footer() {
 
   const getClassName = (itemNav) =>  {
     const pathname = (history.location.pathname).replace('/', '');
-    console.log(pathname);
-    console.log(itemNav);
+    // console.log(pathname);
+    // console.log(itemNav);
 
     if(pathname === itemNav) {
       return 'list active';
@@ -39,12 +42,15 @@ function Footer() {
   // }, []);
 
   const setRoute = (route) => {
-    console.log( route );
+    // console.log( route );
     if(route === 'drinks'){
+      setActivedBtn('drinks');
       history.push('/drinks');
     } else if (route === 'explore') {
+      setActivedBtn('explore');
       history.push('/explore');
     } else if (route === 'foods') {
+      setActivedBtn('foods');
       history.push('/foods');
     }
   }
@@ -73,7 +79,9 @@ function Footer() {
                 data-testid="drinks-bottom-btn"
                 // onClick={ () => setRoute('drinks') }
               >
-                <img alt="drinks" src={ Drinks } />
+                {/* <img alt="drinks" src={ Drinks } /> */}
+                {/* <Wine size={36} color="#a01818" /> */}
+                {activedBtn === 'explore' ? <Wine size={36} color="#a01818" />  : <Wine size={36} color="#ffffff" />}
               </button>
             </span>
             <span className="text">Drinks</span>
@@ -95,7 +103,9 @@ function Footer() {
                 data-testid="drinks-bottom-btn"
                 // onClick={ () => setRoute('explore') }
               >
-                <img alt="drinks" src={ Explore } />
+                {/* <img alt="drinks" src={ Explore } /> */}
+                {/* <ArrowsOutCardinal size={36} color="#a01818" /> */}
+                {activedBtn === 'explore' ? <ArrowsOutCardinal size={36} color="#a01818" />  : <ArrowsOutCardinal size={36} color="#ffffff" />}
               </button>
             </span>
               <span className="text">Explore</span>         
@@ -117,7 +127,9 @@ function Footer() {
                 data-testid="drinks-bottom-btn"
                 // onClick={ () => setRoute('foods') }
               >
-                <img alt="drinks" src={ Food } />
+                {/* <img alt="drinks" src={ Food } /> */}
+                { activedBtn === 'foods' ? <ForkKnife size={36} color="#a01818" /> : <ForkKnife size={36} color="#ffffff" /> }
+                {/* <ForkKnife size={36} color="#a01818" /> */}
               </button>
             </span>
             <span className="text">Food</span>
