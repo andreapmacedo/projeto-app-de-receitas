@@ -199,8 +199,10 @@
 }
 
 .select select {
-  width: 33%;
-  border: none;
+  width: 50%;
+  border: 1px solid var(--item-dark);
+  /* border: none; */
+  padding: 4px;
   border-radius: 6px;
   background-color: var(--primary);
   background-color: var(--soft);

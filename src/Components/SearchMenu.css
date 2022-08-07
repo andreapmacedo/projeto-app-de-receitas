@@ -11,6 +11,9 @@
   border-radius: 6px;
   color: var(--item-dark);
   background-color: var(--soft);
+  border: 1px solid var(--item-dark);
+  /* width: 50%; */
+  margin: 0 4px 0 4px;
 }
 
 .filter-search-menu {
