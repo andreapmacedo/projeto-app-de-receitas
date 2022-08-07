@@ -41,6 +41,7 @@ export default function Login() {
     <div className="container-login">
       <div className="login">
         <input
+          autoComplete="off"
           name="email"
           value={ email }
           type="email"
@@ -63,7 +64,7 @@ export default function Login() {
           type="submit"
           data-testid="login-submit-btn"
           onClick={ saveTokens }
-          className="btn btn-success"
+          className={!verifyEmail || !verifyPassword ? "btn-success" : "btn-success active"}
         >
           Enter
         </button>

@@ -1,15 +1,28 @@
 .container-login {
   align-items: center;
-  background-image: url('../images//tela-login.png');
+  background-image: url('../images/background-logo.png');
   display: flex;
+  flex-direction: column;
   height: 640px;
-  justify-content: center;
   width: 360px;
+  color: var(item-dark);
+}
+
+.container-login img {
+  width: 500px;
 }
 
 .login {
+  background-color: #d0c7b1;
+  background-color: var(--primary);
+  border-radius: 20px;
+  color: var(item-dark);
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px , rgba(0, 0, 0, 0.23) 0 6px 6px;
   display: flex;
   flex-direction: column;
+  margin-top: 250px;
+  padding: 30px;
+  width: 300px;
 }
 
 .login input {
@@ -17,3 +30,22 @@
   opacity: 80%;
 }
 
+.btn-success {
+  /* background-color: #e2c04c; */
+  background-color: rgb(209, 251, 209);
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  /* color: white; */
+  color: #ddd;
+  /* color: #aaa; */
+
+  /* font-family: Neucha , cursive; */
+  font-size: 1.2rem;
+}
+
+
+.btn-success .active {
+  background-color: rgb(108, 203, 108);
+  color: #fff;
+}
