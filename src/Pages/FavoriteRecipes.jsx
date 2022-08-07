@@ -20,7 +20,7 @@ function FavoriteRecipes() {
   function listFavoriteRecipes() {
     if (favoriteRecipes) {
       const favoriteRecipe = favoriteRecipes.map((recipe, index) => (
-        <div className="done-recipes-container">
+        <div className="favorite-recipes-container">
           <div key={ recipe.id }
             className="done-recipes-card"
           >
@@ -114,8 +114,9 @@ function FavoriteRecipes() {
           Drinks
         </button>
       </div>
-
-      { listFavoriteRecipes() }
+      <div className="done-recipes-container">
+        { listFavoriteRecipes() }
+      </div>
     </div>
   );
 }
