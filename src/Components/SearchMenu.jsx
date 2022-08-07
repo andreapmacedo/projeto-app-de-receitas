@@ -69,6 +69,8 @@ export default function SearchMenu() {
     <div className="search-menu">
       <input
         className="search-input"
+        autoComplete="off"
+        // autoComplete="false"
         onChange={ inputHandleChange }
         value={ searched }
         name="search-input"
