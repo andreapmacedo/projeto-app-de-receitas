@@ -51,6 +51,16 @@
   /* height: 100vh; */
 }
 
+.recipes-by-nationalities-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  /* align-items: center; */
+  /* height: 100vh; */
+}
+
 .explore-content button {
   border: none;
   background-color: var(--primary);
@@ -152,8 +162,73 @@
   border: none;
   margin: 10px;
   text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
   z-index: 2;
 }
+
+.recipes-by-ingredient-container .ingredient-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  /* width: 100%; */
+  background-color: transparent;
+  /* background-color: aqua; */
+  border: none;
+  margin: 10px;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.recipes-by-nationalities-container .ingredient-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  width: 160px;
+  background-color: transparent;
+  /* background-color: aqua; */
+  border: none;
+  margin: 10px;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.recipes-by-nationalities-container .ingredient-card .card-name-container {
+  width: 160px;
+}
+
+.recipes-by-nationalities-container .ingredient-card img{
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+
+.recipes-by-ingredient-container .ingredient-card .card-img-container {
+  align-items: center;
+  background-color: rgb(242, 237, 214);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
 
 .ingredient-card .card-img-container {
   align-items: center;
