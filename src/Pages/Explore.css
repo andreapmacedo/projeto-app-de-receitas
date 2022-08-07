@@ -186,3 +186,25 @@
   justify-content: center;
   text-decoration: none;
 }
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 6px 0 6px 0;
+  /* margin: 12px; */
+  background-color: var(--primary);
+  /* width: 300px; */
+}
+
+.select select {
+  width: 33%;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary);
+  background-color: var(--soft);
+  color: var(--item-dark);
+  font-size: 1em;
+  /* font-weight: bold; */
+}

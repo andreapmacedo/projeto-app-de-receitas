@@ -6,6 +6,13 @@
   min-width: 360px;
 }
 
+.search-menu input {
+  padding: 18px;
+  border-radius: 6px;
+  color: var(--item-dark);
+  background-color: var(--soft);
+}
+
 .filter-search-menu {
   margin: 3px;
   padding: 3px;
