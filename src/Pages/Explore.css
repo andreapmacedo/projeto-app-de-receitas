@@ -190,11 +190,11 @@
   justify-content: center;
   align-items: center;
   width: 130px;
-  width: 160px;
+  width: 148px;
   background-color: transparent;
   /* background-color: aqua; */
   border: none;
-  margin: 10px;
+  margin: 14px;
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-radius: 10px;
@@ -202,7 +202,7 @@
 }
 
 .recipes-by-nationalities-container .ingredient-card .card-name-container {
-  width: 160px;
+  width: 148px;
 }
 
 .recipes-by-nationalities-container .ingredient-card img{
