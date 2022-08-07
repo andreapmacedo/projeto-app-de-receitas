@@ -68,12 +68,11 @@ function ExploreNationalitiesFoods() {
             )) }
           </select>
         </div>
-      <div className="recipes-by-ingredient-container">
+      <div className="recipes-by-nationalities-container">
         { dataFoods.map((item, index) => (
           <Link key={ item.idMeal } to={ `/foods/${item.idMeal}` }>
             <div className="ingredient-card" data-testid={ `${index}-recipe-card` }>
               <img
-                className="card-img-container"
                 data-testid={ `${index}-card-img` }
                 src={ item.strMealThumb }
                 alt={ item.strMealThumb }

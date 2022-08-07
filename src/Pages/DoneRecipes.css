@@ -18,6 +18,14 @@
   align-items: flex-start;
 }
 
+.favorite-recipes-container {
+  max-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .done-recipes-card {
   display: flex;
   flex-direction: column;
@@ -25,7 +33,7 @@
   align-items: flex-start;
   /* max-width: 250px; */
   height: 410px;
-  margin: 10px;
+  margin: 14px;
   background-color: aqua;
   background-color: var(--soft-w);
   color: var(--item-dark);

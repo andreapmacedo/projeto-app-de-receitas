@@ -146,9 +146,13 @@
 .navigation ul li button{
   border:  none;
 	transform: translateY(-2px);
-	background-color: var(--primary-dark);
+	/* background-color: var(--primary-dark); */
+	/* background-color: var(--primary); */
 	background-color: var(--soft-w);
+	
 	background-color: var(--soft);
+	/* background-color: rgb(246, 246, 129); */
+
 	/* background-color: transparent; */
 	
 	border-radius: 100%;

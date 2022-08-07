@@ -15,6 +15,7 @@ function ExploreDrinks() {
 
   return (
     <div className="explore">
+      <div className="bcl"></div>
       <div className='explore-header' >
         <Header />
       </div>

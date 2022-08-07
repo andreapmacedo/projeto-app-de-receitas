@@ -21,6 +21,7 @@ function Profile() {
         <p data-testid="profile-email">{email?.email}</p>
       </div>
       <div className="profile-content">
+          <div className="bcl"></div>
         <div className="profile-btn-container">
           <Link to="/done-recipes">
             <div className="profile-icon">
